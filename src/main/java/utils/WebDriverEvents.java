@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.function.Function;
+
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Keys;
@@ -17,15 +19,25 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.FluentWait;
 
+import pageObjects.baseClass;
+
 
 public class WebDriverEvents {
-
-	public static void loadURL(WebDriver driver, String URL) {
+private static Logger logger=LoggerClass.getLogger();
+private static WebDriver driver=baseClass.returnDriver();
+	public static void loadURL(String URL) {
+		logger.debug("Loading URL "+URL+" in browser" );
 		driver.get(URL);
+		logger.debug("Loaded URL "+URL+" in browser" );
+
 
 	}
 
-	private static WebElement returnElement(WebDriver driver, String locatorValue, String locatorType) {
+	public static WebElement returnElement(String elementKey) {
+		String element=baseClass.getPageObjectValue(elementKey);
+		String locatorType=element.split("///")[1];
+		String locatorValue=element.split("///")[0];
+		logger.debug("location element with  "+locatorType+" and locatorValue "+locatorValue);
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
@@ -37,6 +49,7 @@ public class WebDriverEvents {
 			 WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
 			     public WebElement apply(WebDriver driver) {
 			    	 WebElement element=null;
+			    	 driver=WebDriverEvents.driver;
 			    	 switch (locatorType) {
 			 		case "xpath":
 			 			element=driver.findElement(By.xpath(locatorValue));
@@ -68,54 +81,71 @@ public class WebDriverEvents {
 
 	}
 
-	public static List<WebElement> returnElements(WebDriver driver, String locatorValue, String locatorType) {
-		List<WebElement> elements = new ArrayList<>();
-		switch (locatorType) {
-		case "xpath":
-			elements = driver.findElements(By.xpath(locatorValue));
-			break;
-		case "css":
-			elements = driver.findElements(By.cssSelector(locatorValue));
-			break;
-		case "tagName":
-			elements = driver.findElements(By.tagName(locatorValue));
-			
-			break;
-		case "id":
-			elements = driver.findElements(By.id(locatorValue));
-			break;
-		case "className":
-			elements = driver.findElements(By.className(locatorValue));
-			break;
-		case "linkText":
-			elements = driver.findElements(By.linkText(locatorValue));
-			break;
-		case "partialLinkText":
-			elements = driver.findElements(By.partialLinkText(locatorValue));
-			break;
+	public static List<WebElement> returnElements(String elementKey) {
+		String element=baseClass.getPageObjectValue(elementKey);
+		String locatorType=element.split("///")[1];
+		String locatorValue=element.split("///")[0];
+		logger.debug("location element with  "+locatorType+" and locatorValue "+locatorValue);
+		try {
+			Thread.sleep(1000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
-		return elements;
+			FluentWait<WebDriver>wait=new FluentWait<>(driver).withTimeout(Duration.ofSeconds(20)).
+					pollingEvery(Duration.ofMillis(50)).ignoring(NoSuchElementException.class);
+			List<WebElement> foo = wait.until(new Function<WebDriver, List<WebElement>>() {
+			     public List<WebElement> apply(WebDriver driver) {
+			    	 List<WebElement> element=null;
+			    	 driver=WebDriverEvents.driver;
+			    	 switch (locatorType) {
+			 		case "xpath":
+			 			element=driver.findElements(By.xpath(locatorValue));
+			 			break;
+			 		case "css":
+			 			element = driver.findElements(By.cssSelector(locatorValue));
+			 			break;
+			 		case "tagName":
+			 			element = driver.findElements(By.tagName(locatorValue));
+			 			break;
+			 		case "id":
+			 			element = driver.findElements(By.id(locatorValue));
+			 			break;
+			 		case "className":
+			 			element = driver.findElements(By.className(locatorValue));
+			 			break;
+			 		case "linkText":
+			 			element = driver.findElements(By.linkText(locatorValue));
+			 			break;
+			 		case "partialLinkText":
+			 			element = driver.findElements(By.partialLinkText(locatorValue));
+			 			break;
+			 		}
+			    	  return element;
+			     }
+			   });
 
+		return foo;
 	}
 
-	public static void clickElement(String locatorValue, String locatorType, WebDriver driver) {
-		WebElement element=WebDriverEvents.returnElement(driver, locatorValue, locatorType);
+	public static void clickElement(String elementKey) {
+		WebElement element=WebDriverEvents.returnElement(elementKey);
 			
 			if(element!=null) {
 				element.click();
 			}
 	}
 
-	public static void typeInToElement(String locatorValue, String locatorType, WebDriver driver, String textToEnter) {
-		WebElement element=WebDriverEvents.returnElement(driver, locatorValue, locatorType);
+	public static void typeInToElement(String elementKey, String textToEnter) {
+		WebElement element=WebDriverEvents.returnElement(elementKey);
 		
 		if(element!=null) {
 			element.sendKeys(textToEnter);
 		}
 	}
 
-	public static void clearTextElement(String locatorValue, String locatorType, WebDriver driver) {
-		WebElement element=WebDriverEvents.returnElement(driver, locatorValue, locatorType);
+	public static void clearTextElement(String elementKey) {
+		WebElement element=WebDriverEvents.returnElement(elementKey);
 		if(element!=null) {
 			while(element.getText()!="") {
 			element.sendKeys(Keys.BACK_SPACE);
@@ -123,32 +153,32 @@ public class WebDriverEvents {
 		}
 	}
 
-	public static void maximizeWindow( WebDriver driver) {
+	public static void maximizeWindow() {
 		driver.manage().window().maximize();
 	}
 	
-	public static void minimizeWindow( WebDriver driver) {
+	public static void minimizeWindow() {
 		driver.manage().window().minimize();
 	}
 	
-	public static void resizeWindow( WebDriver driver, int width,int height) {
+	public static void resizeWindow( int width,int height) {
 		Dimension dimensions=new Dimension(width,height);
 		driver.manage().window().setSize(dimensions);
 	}
 	
 	
-	public static void getFullScreenWindow( WebDriver driver) {
+	public static void setFullScreenWindow() {
 		driver.manage().window().fullscreen();
 	}
 	
-	public static void navigateForwardTo( WebDriver driver,String titleOfWindow) {
+	public static void navigateForwardTo(String titleOfWindow) {
 	while(!driver.getTitle().equalsIgnoreCase(titleOfWindow)){
 		
 		driver.navigate().forward();
 	}
 	}
 	
-	public static void navigateBackwardTo( WebDriver driver,String titleOfWindow) {
+	public static void navigateBackwardTo(String titleOfWindow) {
 		while(!driver.getTitle().equalsIgnoreCase(titleOfWindow)){
 			
 			driver.navigate().back();
@@ -156,20 +186,20 @@ public class WebDriverEvents {
 		}
 		}
 		
-	public static void refreshBrowser(WebDriver driver) {
+	public static void refreshBrowser() {
 		driver.navigate().refresh();
 	}
 	
 	
-	public static void implicitWait(WebDriver driver,String URL) {
+	public static void implicitWait(String URL) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 	}
 	
 	
 	
 	
-	public static String getElementText(String locatorValue, String locatorType, WebDriver driver) {
-WebElement element=WebDriverEvents.returnElement(driver, locatorValue, locatorType);
+	public static String getElementText(String elementKey) {
+WebElement element=WebDriverEvents.returnElement(elementKey);
 String elementText="";
 				if(element!=null) {
 		elementText=element.getText();
@@ -177,20 +207,19 @@ String elementText="";
 				return elementText;
 	}
 
-	public static void moveMouseOver(String locatorValue, String locatorType, WebDriver driver) {
-		WebElement element=WebDriverEvents.returnElement(driver, locatorValue, locatorType);
+	public static void moveMouseOver(String elementKey) {
+		WebElement element=WebDriverEvents.returnElement(elementKey);
 			if(element!=null) {
 		Actions actions = new Actions(driver);
 		actions.moveToElement(element).build().perform();
 			}
 	}
 
-	public static void dragElement(String sourceLocatorValue, String sourceLocatorType, String targetLocatorValue,
-			String targetLocatorType, WebDriver driver) {
+	public static void dragElement(String sourceElementKey,String destElementKey) {
 		Actions actions = new Actions(driver);
-		WebElement source = WebDriverEvents.returnElement(driver, sourceLocatorValue, sourceLocatorType);
+		WebElement source = WebDriverEvents.returnElement(sourceElementKey);
 		if(source!=null) {
-		WebElement destination = WebDriverEvents.returnElement(driver, targetLocatorValue, targetLocatorType);
+		WebElement destination = WebDriverEvents.returnElement(destElementKey);
 		if(destination!=null) {
 			actions.dragAndDrop(source, destination).build().perform();
 		}
@@ -198,49 +227,49 @@ String elementText="";
 		}
 	}
 
-	public static Point getElementPoints(String locatorValue, String locatorType, WebDriver driver) {
-		WebElement element=WebDriverEvents.returnElement(driver, locatorValue, locatorType);
+	public static Point getElementPoints(String elementKey) {
+		WebElement element=WebDriverEvents.returnElement(elementKey);
 		if(element!=null) {
 		return element.getLocation();
 		}
 		return null;
 	}
 
-	public static String getPageSource(WebDriver driver) {
+	public static String getPageSource() {
 
 		return driver.getPageSource();
 	}
 
-	public static String getCurrentURL(WebDriver driver) {
+	public static String getCurrentURL() {
 		return driver.getCurrentUrl();
 	}
 
-	public static String getCurrentWindow(WebDriver driver) {
+	public static String getCurrentWindow() {
 		return driver.getWindowHandle();
 	}
 
-	public static String getPageTitle(WebDriver driver) {
+	public static String getPageTitle() {
 		return driver.getTitle();
 	}
 	
 	
-	public static void openLinkInNewTab(WebDriver driver,String locatorType,String locatorValue) {
+	public static void openLinkInNewTab(String elementKey) {
 		Actions actions=new Actions(driver);
-		WebDriverEvents.moveMouseOver(locatorValue, locatorType, driver);
+		WebDriverEvents.moveMouseOver(elementKey);
 	actions.sendKeys(Keys.CONTROL).click().build().perform();
-	String elementHrefLink=WebDriverEvents.returnElement(driver, locatorValue, locatorType).getAttribute("href");
-	switchToWindowUsingHrefLink(driver, elementHrefLink);
+	String elementHrefLink=WebDriverEvents.returnElement(elementKey).getAttribute("href");
+	switchToWindowUsingHrefLink(elementHrefLink);
 	
 	}
 
-	public static void openLinkInNewWindow(WebDriver driver,String locatorType,String locatorValue) {
+	public static void openLinkInNewWindow(String elementKey) {
 		Actions actions=new Actions(driver);
-		WebDriverEvents.moveMouseOver(locatorValue, locatorType, driver);
+		WebDriverEvents.moveMouseOver(elementKey);
 	actions.sendKeys(Keys.SHIFT).click().build().perform();
 	
 	}
 
-	public static boolean switchToWindowUsingTitle(WebDriver driver, String titleOfWindow) {
+	public static boolean switchToWindowUsingTitle(String titleOfWindow) {
 		boolean switched = false;
 		Set<String> allWindows = driver.getWindowHandles();
 		Iterator<String> iterator = allWindows.iterator();
@@ -259,7 +288,7 @@ String elementText="";
 		return switched;
 	}
 
-	public static boolean switchToWindowUsingHrefLink(WebDriver driver, String elementHrefLink) {
+	public static boolean switchToWindowUsingHrefLink(String elementHrefLink) {
 		boolean switched = false;
 		Set<String> allWindows = driver.getWindowHandles();
 		Iterator<String> iterator = allWindows.iterator();

@@ -3,12 +3,16 @@ package pageObjects;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Map.Entry;
 import java.util.Properties;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+import utils.LoggerClass;
 
 public class baseClass {
 	private static FileInputStream in=null;
@@ -18,10 +22,17 @@ public class baseClass {
 	public baseClass() {
 		
 	}
-	private static String getConfig(String key) {
+	
+	
+	public static String getConfig(String key) {
 		if(config==null) {
+			
 		try {
-			in=new FileInputStream(System.getProperty("user.dir")+"//DataFiles//config.properties");
+			LoggerClass.getLogger().debug("Initiailizatoin confirguration properties file");
+			String filepath=System.getProperty("user.dir")+"//DataFiles//config.properties";
+			in=new FileInputStream(filepath);
+			LoggerClass.getLogger().debug("Loaded confirguration properties file with path "+filepath);
+
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -29,17 +40,25 @@ public class baseClass {
 		config=new Properties();
 		try {
 			config.load(in);
-		} catch (IOException e) {
+			LoggerClass.getLogger().debug("Initiailized confirguration properties file with following attributes");
+			} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		}
+		LoggerClass.getLogger().debug("Returning element "+config.getProperty(key));
+
 			return config.getProperty(key);
 			}
-	private static String getPageObjectValue(String key) {
+	public static String getPageObjectValue(String key) {
 		if(properties==null) {
+			LoggerClass.getLogger().debug("Initiailizatoin page object properties file");
+
 		try {
-			in=new FileInputStream(System.getProperty("user.dir")+"//DataFiles//pageObject.properties");
+			String filePath=System.getProperty("user.dir")+"//DataFiles//pageObject.properties";
+			LoggerClass.getLogger().debug("Object properties file path is "+filePath);
+
+			in=new FileInputStream(filePath);
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -47,6 +66,8 @@ public class baseClass {
 		properties=new Properties();
 		try {
 			properties.load(in);
+			LoggerClass.getLogger().debug("Loaded Object properties file");
+
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -56,29 +77,22 @@ public class baseClass {
 			}
 	
 	public static WebDriver returnDriver() {
-		String browser=baseClass.getConfig("Driver");
+		WebDriver driver=null;
 		if(driver==null) {
+			String browser=baseClass.getConfig("Driver");
 		switch(browser) {
 		case "Chrome":
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\rohit\\Downloads\\Compressed\\chromedriver_win32\\chromedriver.exe");
+			
 			driver=new ChromeDriver();
-			driver.get(baseClass.getConfig("URL"));
+			
 			driver.manage().window().maximize();
+			
 		}
 		}
 		return driver;
 	}
 	
-	private static By returnBy(String key) {
-		By element=null;
-		String locator=baseClass.getPageObjectValue(key).split("///")[1];
-		switch(locator) {
-		case "xpath":
-			element= By.xpath(baseClass.getPageObjectValue(key).split("///")[0]);
-		}
-		return element;
-	}
-  public static WebElement returnElement(String key) {
-	 return returnDriver().findElement(baseClass.returnBy(key));
-  }
+
+ 
 }
