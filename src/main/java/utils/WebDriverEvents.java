@@ -392,7 +392,7 @@ break;
 			if (currentWindows.contains(elementHrefLink)) {
 				driver.switchTo().window(currentWindows);
 				switched = true;
-				logger.debug("One of opened window matching with title "+titleOfWindow+""
+				logger.debug("One of opened window matching with title "+elementHrefLink+""
 						+ "  looking for and switched to it ");
 break;
 			}
