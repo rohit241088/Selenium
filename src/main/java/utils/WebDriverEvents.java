@@ -37,7 +37,7 @@ private static WebDriver driver=baseClass.returnDriver();
 		logger.debug("location element with pageObject key "+elementKey);
 
 		String element=baseClass.getPageObjectValue(elementKey);
-		logger.debug("Element value from object properties file "+elementKey);
+		logger.debug("Element value from object properties file "+element);
 		String locatorType=element.split("///")[1];
 		String locatorValue=element.split("///")[0];
 			FluentWait<WebDriver>wait=new FluentWait<>(driver).withTimeout(Duration.ofSeconds(20)).
@@ -49,31 +49,31 @@ private static WebDriver driver=baseClass.returnDriver();
 			    	 switch (locatorType) {
 			 		case "xpath":
 			 			element=driver.findElement(By.xpath(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "css":
 			 			element = driver.findElement(By.cssSelector(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "tagName":
 			 			element = driver.findElement(By.tagName(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "id":
 			 			element = driver.findElement(By.id(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "className":
 			 			element = driver.findElement(By.className(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "linkText":
 			 			element = driver.findElement(By.linkText(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "partialLinkText":
 			 			element = driver.findElement(By.partialLinkText(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		}
 			    	 
@@ -102,31 +102,31 @@ private static WebDriver driver=baseClass.returnDriver();
 			    	 switch (locatorType) {
 			 		case "xpath":
 			 			element=driver.findElements(By.xpath(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "css":
 			 			element = driver.findElements(By.cssSelector(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "tagName":
 			 			element = driver.findElements(By.tagName(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "id":
 			 			element = driver.findElements(By.id(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "className":
 			 			element = driver.findElements(By.className(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "linkText":
 			 			element = driver.findElements(By.linkText(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "partialLinkText":
 			 			element = driver.findElements(By.partialLinkText(locatorValue));
-			 			logger.debug("Element located with  "+locatorType);
+			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		}
 			    	  return element;

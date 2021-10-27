@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
 import utils.LoggerClass;
 import utils.WebDriverEvents;
@@ -30,12 +31,11 @@ public class Dashboard extends baseClass {
 		searchField().sendKeys(Keys.ENTER);
 		searchButton().click();
 		serachResults().stream().forEach((WebElement element)->{
-			boolean matching=false;
 			String[] search_ValueArray=search_Value.split(" ");
 			for(int i=0;i<search_ValueArray.length;i++) {
-			if(element.getText().contains(search_ValueArray[i])) {
-			matching=true;
-			}
+				LoggerClass.getLogger().debug("Verifying search value against "
+			+search_ValueArray[i]);
+				Assert.assertTrue(element.getText().contains(search_ValueArray[i]));
 			}
 		});
 		

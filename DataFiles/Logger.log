@@ -2,16 +2,26 @@ DEBUG [main]: Initiailizatoin confirguration properties file
 DEBUG [main]: Loaded confirguration properties file with path D:\eclipse\first\youtube//DataFiles//config.properties
 DEBUG [main]: Initiailized confirguration properties file with following attributes
 DEBUG [main]: Returning element Chrome
+DEBUG [main]: Returning current URL of application data:,
 DEBUG [main]: Returning element https://www.YOUTUBE.COM
 DEBUG [main]: Returning element https://www.YOUTUBE.COM
 DEBUG [main]: Loading URL https://www.YOUTUBE.COM in browser
 DEBUG [main]: Loaded URL https://www.YOUTUBE.COM in browser
-DEBUG [main]: "Searched matched "
+DEBUG [main]: location element with pageObject key searchField
 DEBUG [main]: Initiailizatoin page object properties file
 DEBUG [main]: Object properties file path is D:\eclipse\first\youtube//DataFiles//pageObject.properties
 DEBUG [main]: Loaded Object properties file
-DEBUG [main]: location element with  xpath and locatorValue //input[@id="search"]
-DEBUG [main]: location element with  xpath and locatorValue //input[@id="search"]
-DEBUG [main]: location element with  xpath and locatorValue //input[@id="search"]
-DEBUG [main]: location element with  xpath and locatorValue //form[@id="search-form"]/following-sibling::button
-DEBUG [main]: location element with  xpath and locatorValue //a[@id="video-title"]
+DEBUG [main]: Element value from object properties file //input[@id="search"]///xpath
+DEBUG [main]: Element located with xpath //input[@id="search"]
+DEBUG [main]: location element with pageObject key searchField
+DEBUG [main]: Element value from object properties file //input[@id="search"]///xpath
+DEBUG [main]: Element located with xpath //input[@id="search"]
+DEBUG [main]: location element with pageObject key searchField
+DEBUG [main]: Element value from object properties file //input[@id="search"]///xpath
+DEBUG [main]: Element located with xpath //input[@id="search"]
+DEBUG [main]: location element with pageObject key searchButton
+DEBUG [main]: Element value from object properties file //form[@id="search-form"]/following-sibling::button///xpath
+DEBUG [main]: Element located with xpath //form[@id="search-form"]/following-sibling::button
+DEBUG [main]: location element with pageObject key searchResultsTitle
+DEBUG [main]: Element value from object properties file searchResultsTitle
+DEBUG [main]: Element located with xpath //a[@id="video-title"]
