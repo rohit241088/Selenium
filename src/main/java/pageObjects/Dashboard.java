@@ -28,8 +28,14 @@ public class Dashboard extends baseClass {
 		searchField().sendKeys(Keys.ENTER);
 		searchButton().click();
 		serachResults().stream().forEach((WebElement element)->{
-			System.out.println(element.getText().contains("Rohit")+"\t"+ "Text is "+element.getText());
-			
+			boolean matching=false;
+			String[] search_ValueArray=search_Value.split(" ");
+			for(int i=0;i<search_ValueArray.length;i++) {
+			if(element.getText().contains(search_ValueArray[i])) {
+			matching=true;
+			}
+			}
+			System.out.println("Searched matched "+matching+" "+element.getText());
 		});
 		
 		
