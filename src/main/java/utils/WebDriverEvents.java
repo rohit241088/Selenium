@@ -35,7 +35,6 @@ private static WebDriver driver=baseClass.returnDriver();
 
 	public static WebElement returnElement(String elementKey) {
 		logger.debug("location element with pageObject key "+elementKey);
-
 		String element=baseClass.getPageObjectValue(elementKey);
 		logger.debug("Element value from object properties file "+element);
 		String locatorType=element.split("///")[1];

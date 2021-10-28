@@ -27,7 +27,7 @@ public class Dashboardtests{
 	
 	@Test
 	public void runSearchTest() {
-		dashboard.checkSearchWithValidValue("Rohit Sharma");
+		dashboard.performSearchWithValue("Rohit Sharma").validateResultWithSearch("Rohit Sharma");
 	}
 
 }

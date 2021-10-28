@@ -11,7 +11,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringDecorator;
 
+import src.WebDriverEventListener;
 import utils.LoggerClass;
 
 public class baseClass {
@@ -77,20 +79,24 @@ public class baseClass {
 			}
 	
 	public static WebDriver returnDriver() {
-		WebDriver driver=null;
-		if(driver==null) {
+		
+		WebDriverEventListener events=null;
+		WebDriver driver2=null;
+
+		if(driver2==null) {
+			WebDriver driver=null;
 			String browser=baseClass.getConfig("Driver");
 		switch(browser) {
 		case "Chrome":
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\rohit\\Downloads\\Compressed\\chromedriver_win32\\chromedriver.exe");
-			
+			events=new WebDriverEventListener();
 			driver=new ChromeDriver();
-			
-			driver.manage().window().maximize();
+			driver2=new EventFiringDecorator(events).decorate(driver);
+			driver2.manage().window().maximize();
 			
 		}
 		}
-		return driver;
+		return driver2;
 	}
 	
 

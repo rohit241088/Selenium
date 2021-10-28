@@ -25,3 +25,6 @@ DEBUG [main]: Element located with xpath //form[@id="search-form"]/following-sib
 DEBUG [main]: location element with pageObject key searchResultsTitle
 DEBUG [main]: Element value from object properties file searchResultsTitle
 DEBUG [main]: Element located with xpath //a[@id="video-title"]
+DEBUG [main]: location element with pageObject key searchResultsTitle
+DEBUG [main]: Element value from object properties file searchResultsTitle
+DEBUG [main]: Element located with xpath //a[@id="video-title"]
