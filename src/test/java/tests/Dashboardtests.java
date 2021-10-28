@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -8,26 +9,41 @@ import pageObjects.Dashboard;
 import pageObjects.baseClass;
 import utils.WebDriverEvents;
 
-public class Dashboardtests{
+public class Dashboardtests extends baseClass{
 	
-	private Dashboard dashboard=null;
-	
-	
+
 	
 	
 	@BeforeMethod
 	public void initialize() {
-		dashboard=new Dashboard();
+	
 		if(!WebDriverEvents.getCurrentURL().equalsIgnoreCase(baseClass.getConfig("URL"))) {
 			WebDriverEvents.loadURL(baseClass.getConfig("URL"));
+		
 		}
-	}
+		}
 	
 	
 	
 	@Test
-	public void runSearchTest() {
-		dashboard.performSearchWithValue("Rohit Sharma").validateResultWithSearch("Rohit Sharma");
+	public void validSearchTest() {
+		Dashboard.checkSearchWithValidValue("Rohit Sharma");
+	//	dashboard.validateResultWithSearch("Rohit Sharma");
 	}
 
+	
+@Test
+	public void validSearchTest2() {
+	Dashboard.performSearchWithValue("Rohit Sharma");
+	Dashboard.validateResultWithSearch("Anjali");
+	}
+	
+	
+	
+	@AfterMethod
+public void closeBrowser() {
+WebDriverEvents.closeBrowser();
+	}
+	
+	
 }

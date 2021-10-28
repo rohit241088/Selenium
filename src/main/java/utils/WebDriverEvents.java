@@ -12,12 +12,16 @@ import java.util.function.Function;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import pageObjects.baseClass;
 
@@ -40,7 +44,7 @@ private static WebDriver driver=baseClass.returnDriver();
 		String locatorType=element.split("///")[1];
 		String locatorValue=element.split("///")[0];
 			FluentWait<WebDriver>wait=new FluentWait<>(driver).withTimeout(Duration.ofSeconds(20)).
-					pollingEvery(Duration.ofMillis(50)).ignoring(NoSuchElementException.class);
+					pollingEvery(Duration.ofMillis(10)).ignoring(NoSuchElementException.class);
 			 WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
 			     public WebElement apply(WebDriver driver) {
 			    	 WebElement element=null;
@@ -85,90 +89,82 @@ private static WebDriver driver=baseClass.returnDriver();
 	}
 
 	public static List<WebElement> returnElements(String elementKey) {
+		Wait<WebDriver>wait=new WebDriverWait(driver, Duration.ofSeconds(20));
 		logger.debug("location element with pageObject key "+elementKey);
-
 		String element=baseClass.getPageObjectValue(elementKey);
 		logger.debug("Element value from object properties file "+elementKey);
-
 		String locatorType=element.split("///")[1];
 		String locatorValue=element.split("///")[0];
-				FluentWait<WebDriver>wait=new FluentWait<>(driver).withTimeout(Duration.ofSeconds(20)).
-					pollingEvery(Duration.ofMillis(50)).ignoring(NoSuchElementException.class);
-			List<WebElement> foo = wait.until(new Function<WebDriver, List<WebElement>>() {
-			     public List<WebElement> apply(WebDriver driver) {
-			    	 List<WebElement> element=null;
-			    	 driver=WebDriverEvents.driver;
-			    	 switch (locatorType) {
+		 List<WebElement>elements=null;
+	   	 switch (locatorType) {
 			 		case "xpath":
-			 			element=driver.findElements(By.xpath(locatorValue));
+			 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(locatorValue)));
+			 			elements=driver.findElements(By.xpath(locatorValue));
 			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "css":
-			 			element = driver.findElements(By.cssSelector(locatorValue));
+			 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(locatorValue)));
+			 			elements = driver.findElements(By.cssSelector(locatorValue));
 			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
+			 			
 			 		case "tagName":
-			 			element = driver.findElements(By.tagName(locatorValue));
+			 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.tagName(locatorValue)));
+			 			elements = driver.findElements(By.tagName(locatorValue));
 			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "id":
-			 			element = driver.findElements(By.id(locatorValue));
+			 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.id(locatorValue)));
+			 			elements = driver.findElements(By.id(locatorValue));
 			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "className":
-			 			element = driver.findElements(By.className(locatorValue));
+			 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.className(locatorValue)));
+			 			elements = driver.findElements(By.className(locatorValue));
 			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "linkText":
-			 			element = driver.findElements(By.linkText(locatorValue));
+			 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.linkText(locatorValue)));
+			 			elements = driver.findElements(By.linkText(locatorValue));
 			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		case "partialLinkText":
-			 			element = driver.findElements(By.partialLinkText(locatorValue));
+			 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.partialLinkText(locatorValue)));
+			 			elements = driver.findElements(By.partialLinkText(locatorValue));
 			 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 			 			break;
 			 		}
-			    	  return element;
-			     }
-			   });
-
-		return foo;
-	}
-
-	public static void clickElement(String elementKey) {
-		WebElement element=WebDriverEvents.returnElement(elementKey);
+					return elements;
+			   
 			
-			if(element!=null) {
-				logger.debug("Clicking on element "+elementKey.split("///")[0]);
-
-				element.click();
-				logger.debug("Clicked element "+elementKey.split("///")[0]);
-			}
 	}
 
-	public static void typeInToElement(String elementKey, String textToEnter) {
-		WebElement element=WebDriverEvents.returnElement(elementKey);
+	public static void clickElement(WebElement element) {
+		
+					element.click();
+				logger.debug("Clicked element");
+			}
+	
 
+	public static void typeInToElement(WebElement element, String textToEnter) {
+		
 		if(element!=null) {
-			logger.debug("Typing into element "+elementKey.split("///")[0]+" value"+textToEnter);
+			logger.debug("Typing into element "+" value"+textToEnter);
 			element.sendKeys(textToEnter);
-			logger.debug("Typed into element "+elementKey.split("///")[0]+" value"+textToEnter);
+			logger.debug("Typed into element "+" value"+textToEnter);
 
 		}
 	}
 
-	public static void clearTextElement(String elementKey) {
-		WebElement element=WebDriverEvents.returnElement(elementKey);
-		if(element!=null) {
-			logger.debug("clearing value from element "+elementKey.split("///")[0]);
-
+	public static void clearTextElement(WebElement element) {
+		
 			while(element.getText()!="") {
 
 				element.sendKeys(Keys.BACK_SPACE);
 			}
-			logger.debug("Cleared value from element "+elementKey.split("///")[0]);
+			logger.debug("Cleared value from element");
 
-		}
+		
 	}
 
 	public static void maximizeWindow() {
@@ -399,5 +395,12 @@ break;
 		return switched;
 	}
 	
+	public static void executeJavaScript(WebElement element) {
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].click();", element);
+	}
 	
+	public static void closeBrowser() {
+		driver.close();
+	}
 }

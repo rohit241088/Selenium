@@ -1,5 +1,6 @@
 package pageObjects;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -11,7 +12,7 @@ import org.testng.Assert;
 import utils.LoggerClass;
 import utils.WebDriverEvents;
 
-public class Dashboard extends baseClass {
+public class Dashboard {
 
 	private static WebElement searchField() {
 		return WebDriverEvents.returnElement("searchField");
@@ -26,60 +27,75 @@ public class Dashboard extends baseClass {
 		
 	}
 	
+
 	
-	public Dashboard performSearchWithValue(String text){
+	
+	public static void performSearchWithValue(String text){
 		searchField().sendKeys(text);
 		searchField().sendKeys(Keys.ARROW_DOWN);
 		searchField().sendKeys(Keys.ENTER);
 		searchButton().click();
-		serachResults().stream().forEach((WebElement element)->{
-			String[] search_ValueArray=text.split(" ");
-			for(int i=0;i<search_ValueArray.length;i++) {
-				LoggerClass.getLogger().debug("Verifying search value against "
-			+search_ValueArray[i]);
-				Assert.assertTrue(element.getText().contains(search_ValueArray[i]));
-			}
-		});
-		
-		return this;
+			
 	}
 		
 		
-	public Dashboard validateResultWithSearch(String text){
-			serachResults().stream().forEach((WebElement element)->{
-			String[] search_ValueArray=text.split(" ");
-			for(int i=0;i<search_ValueArray.length;i++) {
-				LoggerClass.getLogger().debug("Verifying search value against "
-			+search_ValueArray[i]);
-				Assert.assertTrue(element.getText().contains(search_ValueArray[i]));
+	public static void validateResultWithSearch(String text){
+		boolean matching=false;
+		String[] searchParameters=text.split(" ");
+		Iterator<WebElement>elementIterator=serachResults().iterator();
+		LoggerClass.getLogger().debug("Total resutls "+serachResults().size());
+			while(elementIterator.hasNext()) {
+			String currentElementText=elementIterator.next().getText();
+			for(int i=0;i<searchParameters.length;i++) {
+				String indexString=searchParameters[i];
+				LoggerClass.getLogger().debug("Verifying search value "
+			+indexString+ "against "+currentElementText);
+				System.out.println("Verifying search value "
+			+indexString+ "against "+currentElementText);
+				if(currentElementText.contains(indexString)) {
+matching=true;
+break;
+				}
+				else {
+					matching=false;
+				}
 			}
-		});
-		
-		return this;
+			Assert.assertTrue(matching);
+		}
 	}
 		
 
-	public void checkSearchWithValidValue(String search_Value) {
+	public static void checkSearchWithValidValue(String search_Value) {
+		boolean matching=false;
+		String[] searchParameters=search_Value.split(" ");
 		searchField().sendKeys(search_Value);
 		searchField().sendKeys(Keys.ARROW_DOWN);
 		searchField().sendKeys(Keys.ENTER);
-		searchButton().click();
-		serachResults().stream().forEach((WebElement element)->{
-			String[] search_ValueArray=search_Value.split(" ");
-			for(int i=0;i<search_ValueArray.length;i++) {
-				LoggerClass.getLogger().debug("Verifying search value against "
-			+search_ValueArray[i]);
-				Assert.assertTrue(element.getText().contains(search_ValueArray[i]));
+			//	WebDriverEvents.clickElement(searchButton());
+		Iterator<WebElement>elementIterator=serachResults().iterator();
+		LoggerClass.getLogger().debug("Total resutls "+serachResults().size());
+			while(elementIterator.hasNext()) {
+			String currentElementText=elementIterator.next().getText();
+			for(int i=0;i<searchParameters.length;i++) {
+				String indexString=searchParameters[i];
+				LoggerClass.getLogger().debug("Verifying search value "
+			+indexString+ "against "+currentElementText);
+				System.out.println("Verifying search value "
+			+indexString+ "against "+currentElementText);
+				if(currentElementText.contains(indexString)) {
+matching=true;
+break;
+				}
+				else {
+					matching=false;
+				}
 			}
-		});
+			Assert.assertTrue(matching);
+		}
 		
-		
-	}
-	public Dashboard checkSearchWithInvalidValue(String search_Value) {
+			}
+	public static void checkSearchWithInvalidValue(String search_Value) {
 		searchField().sendKeys(search_Value);
-		searchField().sendKeys(Keys.ARROW_DOWN);
-		searchField().sendKeys(Keys.ENTER);
-		searchButton().click();
-		return this;
+			searchButton().click();
 	}
 }

@@ -24,8 +24,10 @@ public class baseClass {
 	public baseClass() {
 		
 	}
-	
-	
+	static {
+		returnDriver();
+	}
+
 	public static String getConfig(String key) {
 		if(config==null) {
 			

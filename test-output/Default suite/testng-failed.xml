@@ -6,7 +6,9 @@
       <class name="tests.Dashboardtests">
         <methods>
           <include name="initialize"/>
-          <include name="runSearchTest"/>
+          <include name="validSearchTest2"/>
+          <include name="validSearchTest"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- tests.Dashboardtests -->
     </classes>
