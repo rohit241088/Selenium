@@ -24,9 +24,9 @@ public class baseClass {
 	public baseClass() {
 		
 	}
-	static {
-		returnDriver();
-	}
+	
+	
+	
 
 	public static String getConfig(String key) {
 		if(config==null) {
@@ -87,7 +87,7 @@ public class baseClass {
 
 		if(driver2==null) {
 			WebDriver driver=null;
-			String browser=baseClass.getConfig("Driver");
+			String browser=this.getConfig("Driver");
 		switch(browser) {
 		case "Chrome":
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\rohit\\Downloads\\Compressed\\chromedriver_win32\\chromedriver.exe");
@@ -101,6 +101,12 @@ public class baseClass {
 		return driver2;
 	}
 	
+	public void loadURL(String URL) {
+		logger.debug("Loading URL "+URL+" in browser" );
+		driver.get(URL);
+		logger.debug("Loaded URL "+URL+" in browser" );
 
+
+	}
  
 }

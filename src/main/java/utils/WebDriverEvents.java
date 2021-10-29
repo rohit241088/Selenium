@@ -28,14 +28,8 @@ import pageObjects.baseClass;
 
 public class WebDriverEvents {
 private static Logger logger=LoggerClass.getLogger();
-private static WebDriver driver=baseClass.returnDriver();
-	public static void loadURL(String URL) {
-		logger.debug("Loading URL "+URL+" in browser" );
-		driver.get(URL);
-		logger.debug("Loaded URL "+URL+" in browser" );
+private static WebDriver driver=null;
 
-
-	}
 
 	public static WebElement returnElement(String elementKey) {
 		logger.debug("location element with pageObject key "+elementKey);

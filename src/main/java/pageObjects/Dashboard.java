@@ -9,37 +9,40 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import src.baseClass2;
 import utils.LoggerClass;
 import utils.WebDriverEvents;
+import utils.WebDriverEvents2;
 
-public class Dashboard {
+public class Dashboard extends WebDriverEvents2{
 
-	private static WebElement searchField() {
-		return WebDriverEvents.returnElement("searchField");
+	
+	
+	private WebElement searchField() {
+		return super.returnElement("searchField");
 	}
 
-	private static WebElement searchButton() {
-		return WebDriverEvents.returnElement("searchButton");
+	private WebElement searchButton() {
+		return super.returnElement("searchButton");
 	}
 	
-	private static List<WebElement> serachResults() {
-		return WebDriverEvents.returnElements("searchResultsTitle");
+	private List<WebElement> serachResults() {
+		return super.returnElements("searchResultsTitle");
 		
 	}
 	
 
 	
 	
-	public static void performSearchWithValue(String text){
+	public void performSearchWithValue(String text){
 		searchField().sendKeys(text);
 		searchField().sendKeys(Keys.ARROW_DOWN);
 		searchField().sendKeys(Keys.ENTER);
-		searchButton().click();
-			
+				
 	}
 		
 		
-	public static void validateResultWithSearch(String text){
+	public void validateResultWithSearch(String text){
 		boolean matching=false;
 		String[] searchParameters=text.split(" ");
 		Iterator<WebElement>elementIterator=serachResults().iterator();
@@ -49,9 +52,9 @@ public class Dashboard {
 			for(int i=0;i<searchParameters.length;i++) {
 				String indexString=searchParameters[i];
 				LoggerClass.getLogger().debug("Verifying search value "
-			+indexString+ "against "+currentElementText);
+			+indexString+ " against "+currentElementText);
 				System.out.println("Verifying search value "
-			+indexString+ "against "+currentElementText);
+			+indexString+ " against "+currentElementText);
 				if(currentElementText.contains(indexString)) {
 matching=true;
 break;
@@ -65,7 +68,7 @@ break;
 	}
 		
 
-	public static void checkSearchWithValidValue(String search_Value) {
+	public void checkSearchWithValidValue(String search_Value) {
 		boolean matching=false;
 		String[] searchParameters=search_Value.split(" ");
 		searchField().sendKeys(search_Value);
@@ -94,7 +97,7 @@ break;
 		}
 		
 			}
-	public static void checkSearchWithInvalidValue(String search_Value) {
+	public void checkSearchWithInvalidValue(String search_Value) {
 		searchField().sendKeys(search_Value);
 			searchButton().click();
 	}

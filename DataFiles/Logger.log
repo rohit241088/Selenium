@@ -1,16 +1,12 @@
 DEBUG [main]: Initiailizatoin confirguration properties file
 DEBUG [main]: Loaded confirguration properties file with path D:\eclipse\first\youtube//DataFiles//config.properties
 DEBUG [main]: Initiailized confirguration properties file with following attributes
-DEBUG [main]: Returning element Chrome
-DEBUG [main]: Returning current URL of application data:,
-DEBUG [main]: Returning element https://www.YOUTUBE.COM
-DEBUG [main]: Returning element https://www.YOUTUBE.COM
-DEBUG [main]: Loading URL https://www.YOUTUBE.COM in browser
-DEBUG [main]: Loaded URL https://www.YOUTUBE.COM in browser
-DEBUG [main]: location element with pageObject key searchField
 DEBUG [main]: Initiailizatoin page object properties file
 DEBUG [main]: Object properties file path is D:\eclipse\first\youtube//DataFiles//pageObject.properties
 DEBUG [main]: Loaded Object properties file
+DEBUG [main]: Loading URL https://www.YOUTUBE.COM in browser
+DEBUG [main]: Loaded URL https://www.YOUTUBE.COM in browser
+DEBUG [main]: location element with pageObject key searchField
 DEBUG [main]: Element value from object properties file //input[@id="search"]///xpath
 DEBUG [main]: Element located with xpath //input[@id="search"]
 DEBUG [main]: location element with pageObject key searchField
@@ -25,24 +21,41 @@ DEBUG [main]: Element located with xpath //a[@id="video-title"]
 DEBUG [main]: location element with pageObject key searchResultsTitle
 DEBUG [main]: Element value from object properties file searchResultsTitle
 DEBUG [main]: Element located with xpath //a[@id="video-title"]
-DEBUG [main]: Total resutls 27
-DEBUG [main]: Verifying search value Rohitagainst Wasim Akram Reveals Why Rohit Sharma Is His Favourite Indian Player: India Vs Pakistan T20 Match
-DEBUG [main]: Verifying search value Rohitagainst Virat Kohli left baffled as reporter asks if India will drop Rohit Sharma in coming matches
+DEBUG [main]: Total resutls 22
 DEBUG [main]: Verifying search value Rohitagainst India Vs Pakistan T20 WC: How Virat Kohli Defends Rohit Sharma | NewsMo
-DEBUG [main]: Verifying search value Rohitagainst Rohit Sharma And Hardik Pandya Changes In Team India | Pakistani Public Reaction On INDIA | Popkorns
+DEBUG [main]: Verifying search value Rohitagainst India, Pakistan prepare ahead of T20 WC clash; Kohli, Rohit, mentor Dhoni seen in nets | Cricket
+DEBUG [main]: Verifying search value Rohitagainst Wasim Akram Reveals Why Rohit Sharma Is His Favourite Indian Player: India Vs Pakistan T20 Match
 DEBUG [main]: Verifying search value Rohitagainst Rohit Sharma - Top Run-Scorer | ICC Cricket World Cup 2019 | Best Bits
+DEBUG [main]: Verifying search value Rohitagainst From the Vault: Rohit belts unbeaten 171 at the WACA
+DEBUG [main]: Verifying search value Rohitagainst Team India Practice session - Virat Kohli , Rohit Sharma , Hardik Pandya , Shami and MS Dhoni |
 DEBUG [main]: Verifying search value Rohitagainst LIVE TV INSULTS - Pakistan - India - Newzeeland - Rohit Sharma - Shoib Akhtar
 DEBUG [main]: Verifying search value Rohitagainst Rohit Sharma scores 4th T20 international hundred most by any batsman in history vs westindies
-DEBUG [main]: Verifying search value Rohitagainst The Virat-Rohit Saga - Part 2 | The Burden of Captaincy | Fracture - Year 2013-2019 | Indian Cricket
-DEBUG [main]: Verifying search value Rohitagainst From the Vault: Rohit belts unbeaten 171 at the WACA
-DEBUG [main]: Verifying search value Rohitagainst Rohit's Majestic 127 | 4th Test Day 3 | India Tour Of England 2021 | Hindi
-DEBUG [main]: Verifying search value Rohitagainst Will you drop Rohit Sharma from T20I, Kohli asks reporter on team selection question
-DEBUG [main]: Verifying search value Rohitagainst pak media reaction on Rohit Sharma career khatam #rohitsharma #shorts #pakmedia #T20 World cup #Ipl
-DEBUG [main]: Verifying search value Rohitagainst Brilliant Rohit nearly steals the show | Gillette ODI Series v India | 2018-19
 DEBUG [main]: Verifying search value Rohitagainst Sharma Stars In Thriller | SUPER OVER REPLAY | BLACKCAPS v India - 3rd T20, 2020
 DEBUG [main]: Verifying search value Sharmaagainst Sharma Stars In Thriller | SUPER OVER REPLAY | BLACKCAPS v India - 3rd T20, 2020
-DEBUG [main]: Verifying search value Rohitagainst INDvPAK : What Happened Between Rohit Sharma & Babar Azam before Match | Cricbolly ||
-DEBUG [main]: Verifying search value Rohitagainst Rohit 264(173) highlights Ind vs sl Rohit destructive batting #rohit
-DEBUG [main]: Verifying search value Rohitagainst Rohit Sharma got angry on a fan, dis respect to such a big player.
-DEBUG [main]: Verifying search value Rohitagainst Virat Kohli's reply to controversial questions after Pak won by 10 wickets
-DEBUG [main]: Verifying search value Sharmaagainst Virat Kohli's reply to controversial questions after Pak won by 10 wickets
+DEBUG [main]: Verifying search value Rohitagainst Rohit Sharma On Marrying 'Yuvi's Sister' Ritika, Mumbai Indians & Humiliations | BwC S4E8 | Part 1
+DEBUG [main]: Verifying search value Rohitagainst Rohit's Sublime 127 | 4th Test Day 3 | India Tour Of England 2021
+DEBUG [main]: Verifying search value Rohitagainst The Virat-Rohit Saga - Part 2 | The Burden of Captaincy | Fracture - Year 2013-2019 | Indian Cricket
+DEBUG [main]: Initiailizatoin confirguration properties file
+DEBUG [main]: Loaded confirguration properties file with path D:\eclipse\first\youtube//DataFiles//config.properties
+DEBUG [main]: Initiailized confirguration properties file with following attributes
+DEBUG [main]: Initiailizatoin page object properties file
+DEBUG [main]: Object properties file path is D:\eclipse\first\youtube//DataFiles//pageObject.properties
+DEBUG [main]: Loaded Object properties file
+DEBUG [main]: Loading URL https://www.YOUTUBE.COM in browser
+DEBUG [main]: Loaded URL https://www.YOUTUBE.COM in browser
+DEBUG [main]: location element with pageObject key searchField
+DEBUG [main]: Element value from object properties file //input[@id="search"]///xpath
+DEBUG [main]: Element located with xpath //input[@id="search"]
+DEBUG [main]: location element with pageObject key searchField
+DEBUG [main]: Element value from object properties file //input[@id="search"]///xpath
+DEBUG [main]: Element located with xpath //input[@id="search"]
+DEBUG [main]: location element with pageObject key searchField
+DEBUG [main]: Element value from object properties file //input[@id="search"]///xpath
+DEBUG [main]: Element located with xpath //input[@id="search"]
+DEBUG [main]: location element with pageObject key searchResultsTitle
+DEBUG [main]: Element value from object properties file searchResultsTitle
+DEBUG [main]: Element located with xpath //a[@id="video-title"]
+DEBUG [main]: location element with pageObject key searchResultsTitle
+DEBUG [main]: Element value from object properties file searchResultsTitle
+DEBUG [main]: Element located with xpath //a[@id="video-title"]
+DEBUG [main]: Total resutls 26

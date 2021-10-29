@@ -2,47 +2,38 @@ package tests;
 
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pageObjects.Dashboard;
-import pageObjects.baseClass;
-import utils.WebDriverEvents;
-
-public class Dashboardtests extends baseClass{
-	
-
-	
+public class Dashboardtests{
+	private Dashboard dashboard=null;
 	
 	@BeforeMethod
 	public void initialize() {
-	
-		if(!WebDriverEvents.getCurrentURL().equalsIgnoreCase(baseClass.getConfig("URL"))) {
-			WebDriverEvents.loadURL(baseClass.getConfig("URL"));
-		
-		}
-		}
-	
+		dashboard=new Dashboard();
+	}
 	
 	
 	@Test
 	public void validSearchTest() {
-		Dashboard.checkSearchWithValidValue("Rohit Sharma");
+		dashboard.checkSearchWithValidValue("Rohit Sharma");
 	//	dashboard.validateResultWithSearch("Rohit Sharma");
 	}
 
 	
 @Test
 	public void validSearchTest2() {
-	Dashboard.performSearchWithValue("Rohit Sharma");
-	Dashboard.validateResultWithSearch("Anjali");
+	dashboard.performSearchWithValue("Rohit Sharma");
+	dashboard.validateResultWithSearch(" ");
 	}
 	
 	
 	
-	@AfterMethod
+	//@AfterMethod
 public void closeBrowser() {
-WebDriverEvents.closeBrowser();
+		dashboard.closeBrowser();
+		
+
 	}
 	
 	
