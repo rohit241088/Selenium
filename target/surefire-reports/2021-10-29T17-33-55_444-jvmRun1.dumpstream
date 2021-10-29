@@ -1,0 +1,463 @@
+# Created at 2021-10-29T17:34:12.823
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.base/java.io.DataInputStream.readInt(DataInputStream.java:398)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: [
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 1
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 6
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 3
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 5
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 5
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 0
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 9
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 0
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 5
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 3
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: .
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 8
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 6
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: 0
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: ]
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: [
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: W
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: A
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: R
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: N
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: I
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: N
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: G
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: ]
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream: :
+
+# Created at 2021-10-29T17:34:13.859
+Unexpected IOException with stream:  
+
+# Created at 2021-10-29T17:34:13.876
+Unexpected IOException with stream: T
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: i
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: m
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: e
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: d
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream:  
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: o
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: u
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: t
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream:  
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: c
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: o
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: n
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: n
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: e
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: c
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: t
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: i
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: n
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream: g
+
+# Created at 2021-10-29T17:34:13.877
+Unexpected IOException with stream:  
+
+# Created at 2021-10-29T17:34:13.892
+Unexpected IOException with stream: t
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: o
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream:  
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: C
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: h
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: r
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: o
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: m
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: e
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: ,
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream:  
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: r
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: e
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: t
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: r
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: y
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: i
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: n
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: g
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: .
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: .
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: .
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: 
+
+# Created at 2021-10-29T17:34:13.893
+Unexpected IOException with stream: 
+
+
+# Created at 2021-10-29T17:34:22.090
+Unexpected IOException: 8,1,tests.Dashboardtests,validSearchTest(tests.Dashboardtests),null,chrome not reachable\000A  (Session info: chrome=95.0.4638.69)\000ABuild info: version: '4.0.0'\002C revision: '3a21814679'\000ASystem info: host: 'ROHIT'\002C ip: '192.168.1.100'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '17'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [5ec99343a611df03be91f7734086b446\002C findElements {using=xpath\002C value=//a[@id="video-title"]}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 95.0.4638.69\002C chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b...\002C userDataDir: C:\005CUsers\005Crohit\005CAppData\005CLoca...}\002C goog:chromeOptions: {debuggerAddress: localhost:49935}\002C javascriptEnabled: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: WINDOWS\002C platformName: WINDOWS\002C proxy: Proxy()\002C se:cdp: ws://localhost:49935/devtoo...\002C se:cdpVersion: 95.0.4638.69\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 5ec99343a611df03be91f7734086b446,null,chrome not reachable\000A  (Session info: chrome=95.0.4638.69)\000ABuild info: version: '4.0.0'\002C revision: '3a21814679'\000ASystem info: host: 'ROHIT'\002C ip: '192.168.1.100'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '17'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [5ec99343a611df03be91f7734086b446\002C findElements {using=xpath\002C value=//a[@id="video-title"]}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 95.0.4638.69\002C chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b...\002C userDataDir: C:\005CUsers\005Crohit\005CAppData\005CLoca...}\002C goog:chromeOptions: {debuggerAddress: localhost:49935}\002C javascriptEnabled: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: WINDOWS\002C platformName: WINDOWS\002C proxy: Proxy()\002C se:cdp: ws://localhost:49935/devtoo...\002C se:cdpVersion: 95.0.4638.69\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 5ec99343a611df03be91f7734086b446,Dashboardtests.validSearchTest:19 \00BB WebDriver chrome not reachable\000A  (Session ...,org.openqa.selenium.WebDriverException: \000Achrome not reachable\000A  (Session info: chrome=95.0.4638.69)\000ABuild info: version: '4.0.0'\002C revision: '3a21814679'\000ASystem info: host: 'ROHIT'\002C ip: '192.168.1.100'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '17'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [5ec99343a611df03be91f7734086b446\002C findElements {using=xpath\002C value=//a[@id="video-title"]}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 95.0.4638.69\002C chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b...\002C userDataDir: C:\005CUsers\005Crohit\005CAppData\005CLoca...}\002C goog:chromeOptions: {debuggerAddress: localhost:49935}\002C javascriptEnabled: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: WINDOWS\002C platformName: WINDOWS\002C proxy: Proxy()\002C se:cdp: ws://localhost:49935/devtoo...\002C se:cdpVersion: 95.0.4638.69\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 5ec99343a611df03be91f7734086b446\000A\0009at tests.Dashboardtests.validSearchTest(Dashboardtests.java:19)\000A
+
+
+# Created at 2021-10-29T17:34:26.114
+Unexpected IOException with stream: [
+
+# Created at 2021-10-29T17:34:26.114
+Unexpected IOException with stream: 1
+
+# Created at 2021-10-29T17:34:26.115
+Unexpected IOException with stream: 6
+
+# Created at 2021-10-29T17:34:26.115
+Unexpected IOException with stream: 3
+
+# Created at 2021-10-29T17:34:26.116
+Unexpected IOException with stream: 5
+
+# Created at 2021-10-29T17:34:26.116
+Unexpected IOException with stream: 5
+
+# Created at 2021-10-29T17:34:26.116
+Unexpected IOException with stream: 0
+
+# Created at 2021-10-29T17:34:26.117
+Unexpected IOException with stream: 9
+
+# Created at 2021-10-29T17:34:26.117
+Unexpected IOException with stream: 0
+
+# Created at 2021-10-29T17:34:26.117
+Unexpected IOException with stream: 6
+
+# Created at 2021-10-29T17:34:26.117
+Unexpected IOException with stream: 6
+
+# Created at 2021-10-29T17:34:26.118
+Unexpected IOException with stream: .
+
+# Created at 2021-10-29T17:34:26.118
+Unexpected IOException with stream: 1
+
+# Created at 2021-10-29T17:34:26.118
+Unexpected IOException with stream: 1
+
+# Created at 2021-10-29T17:34:26.118
+Unexpected IOException with stream: 4
+
+# Created at 2021-10-29T17:34:26.119
+Unexpected IOException with stream: ]
+
+# Created at 2021-10-29T17:34:26.119
+Unexpected IOException with stream: [
+
+# Created at 2021-10-29T17:34:26.119
+Unexpected IOException with stream: W
+
+# Created at 2021-10-29T17:34:26.119
+Unexpected IOException with stream: A
+
+# Created at 2021-10-29T17:34:26.120
+Unexpected IOException with stream: R
+
+# Created at 2021-10-29T17:34:26.120
+Unexpected IOException with stream: N
+
+# Created at 2021-10-29T17:34:26.120
+Unexpected IOException with stream: I
+
+# Created at 2021-10-29T17:34:26.121
+Unexpected IOException with stream: N
+
+# Created at 2021-10-29T17:34:26.121
+Unexpected IOException with stream: G
+
+# Created at 2021-10-29T17:34:26.121
+Unexpected IOException with stream: ]
+
+# Created at 2021-10-29T17:34:26.121
+Unexpected IOException with stream: :
+
+# Created at 2021-10-29T17:34:26.122
+Unexpected IOException with stream:  
+
+# Created at 2021-10-29T17:34:26.122
+Unexpected IOException with stream: T
+
+# Created at 2021-10-29T17:34:26.122
+Unexpected IOException with stream: i
+
+# Created at 2021-10-29T17:34:26.122
+Unexpected IOException with stream: m
+
+# Created at 2021-10-29T17:34:26.123
+Unexpected IOException with stream: e
+
+# Created at 2021-10-29T17:34:26.123
+Unexpected IOException with stream: d
+
+# Created at 2021-10-29T17:34:26.123
+Unexpected IOException with stream:  
+
+# Created at 2021-10-29T17:34:26.123
+Unexpected IOException with stream: o
+
+# Created at 2021-10-29T17:34:26.124
+Unexpected IOException with stream: u
+
+# Created at 2021-10-29T17:34:26.124
+Unexpected IOException with stream: t
+
+# Created at 2021-10-29T17:34:26.124
+Unexpected IOException with stream:  
+
+# Created at 2021-10-29T17:34:26.124
+Unexpected IOException with stream: c
+
+# Created at 2021-10-29T17:34:26.125
+Unexpected IOException with stream: o
+
+# Created at 2021-10-29T17:34:26.125
+Unexpected IOException with stream: n
+
+# Created at 2021-10-29T17:34:26.125
+Unexpected IOException with stream: n
+
+# Created at 2021-10-29T17:34:26.126
+Unexpected IOException with stream: e
+
+# Created at 2021-10-29T17:34:26.126
+Unexpected IOException with stream: c
+
+# Created at 2021-10-29T17:34:26.126
+Unexpected IOException with stream: t
+
+# Created at 2021-10-29T17:34:26.127
+Unexpected IOException with stream: i
+
+# Created at 2021-10-29T17:34:26.127
+Unexpected IOException with stream: n
+
+# Created at 2021-10-29T17:34:26.127
+Unexpected IOException with stream: g
+
+# Created at 2021-10-29T17:34:26.127
+Unexpected IOException with stream:  
+
+# Created at 2021-10-29T17:34:26.128
+Unexpected IOException with stream: t
+
+# Created at 2021-10-29T17:34:26.128
+Unexpected IOException with stream: o
+
+# Created at 2021-10-29T17:34:26.128
+Unexpected IOException with stream:  
+
+# Created at 2021-10-29T17:34:26.128
+Unexpected IOException with stream: C
+
+# Created at 2021-10-29T17:34:26.130
+Unexpected IOException with stream: h
+
+# Created at 2021-10-29T17:34:26.130
+Unexpected IOException with stream: r
+
+# Created at 2021-10-29T17:34:26.131
+Unexpected IOException with stream: o
+
+# Created at 2021-10-29T17:34:26.132
+Unexpected IOException with stream: m
+
+# Created at 2021-10-29T17:34:26.132
+Unexpected IOException with stream: e
+
+# Created at 2021-10-29T17:34:26.133
+Unexpected IOException with stream: ,
+
+# Created at 2021-10-29T17:34:26.134
+Unexpected IOException with stream:  
+
+# Created at 2021-10-29T17:34:26.134
+Unexpected IOException with stream: r
+
+# Created at 2021-10-29T17:34:26.135
+Unexpected IOException with stream: e
+
+# Created at 2021-10-29T17:34:26.135
+Unexpected IOException with stream: t
+
+# Created at 2021-10-29T17:34:26.136
+Unexpected IOException with stream: r
+
+# Created at 2021-10-29T17:34:26.136
+Unexpected IOException with stream: y
+
+# Created at 2021-10-29T17:34:26.137
+Unexpected IOException with stream: i
+
+# Created at 2021-10-29T17:34:26.138
+Unexpected IOException with stream: n
+
+# Created at 2021-10-29T17:34:26.138
+Unexpected IOException with stream: g
+
+# Created at 2021-10-29T17:34:26.138
+Unexpected IOException with stream: .
+
+# Created at 2021-10-29T17:34:26.138
+Unexpected IOException with stream: .
+
+# Created at 2021-10-29T17:34:26.138
+Unexpected IOException with stream: .
+
+# Created at 2021-10-29T17:34:26.139
+Unexpected IOException with stream: 
+
+# Created at 2021-10-29T17:34:26.139
+Unexpected IOException with stream: 
+
+
+# Created at 2021-10-29T17:34:34.306
+Unexpected IOException: 8,1,tests.Dashboardtests,initialize(tests.Dashboardtests),null,chrome not reachable\000A  (Session info: chrome=95.0.4638.69)\000ABuild info: version: '4.0.0'\002C revision: '3a21814679'\000ASystem info: host: 'ROHIT'\002C ip: '192.168.1.100'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '17'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [5ec99343a611df03be91f7734086b446\002C get {url=https://www.YOUTUBE.COM}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 95.0.4638.69\002C chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b...\002C userDataDir: C:\005CUsers\005Crohit\005CAppData\005CLoca...}\002C goog:chromeOptions: {debuggerAddress: localhost:49935}\002C javascriptEnabled: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: WINDOWS\002C platformName: WINDOWS\002C proxy: Proxy()\002C se:cdp: ws://localhost:49935/devtoo...\002C se:cdpVersion: 95.0.4638.69\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 5ec99343a611df03be91f7734086b446,null,chrome not reachable\000A  (Session info: chrome=95.0.4638.69)\000ABuild info: version: '4.0.0'\002C revision: '3a21814679'\000ASystem info: host: 'ROHIT'\002C ip: '192.168.1.100'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '17'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [5ec99343a611df03be91f7734086b446\002C get {url=https://www.YOUTUBE.COM}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 95.0.4638.69\002C chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b...\002C userDataDir: C:\005CUsers\005Crohit\005CAppData\005CLoca...}\002C goog:chromeOptions: {debuggerAddress: localhost:49935}\002C javascriptEnabled: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: WINDOWS\002C platformName: WINDOWS\002C proxy: Proxy()\002C se:cdp: ws://localhost:49935/devtoo...\002C se:cdpVersion: 95.0.4638.69\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 5ec99343a611df03be91f7734086b446,Dashboardtests.initialize:13 \00BB WebDriver chrome not reachable\000A  (Session info:...,org.openqa.selenium.WebDriverException: \000Achrome not reachable\000A  (Session info: chrome=95.0.4638.69)\000ABuild info: version: '4.0.0'\002C revision: '3a21814679'\000ASystem info: host: 'ROHIT'\002C ip: '192.168.1.100'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '17'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [5ec99343a611df03be91f7734086b446\002C get {url=https://www.YOUTUBE.COM}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 95.0.4638.69\002C chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b...\002C userDataDir: C:\005CUsers\005Crohit\005CAppData\005CLoca...}\002C goog:chromeOptions: {debuggerAddress: localhost:49935}\002C javascriptEnabled: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: WINDOWS\002C platformName: WINDOWS\002C proxy: Proxy()\002C se:cdp: ws://localhost:49935/devtoo...\002C se:cdpVersion: 95.0.4638.69\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 5ec99343a611df03be91f7734086b446\000A\0009at tests.Dashboardtests.initialize(Dashboardtests.java:13)\000A
+
+
+# Created at 2021-10-29T17:34:34.308
+Unexpected IOException: 5,1,tests.Dashboardtests,validSearchTest2(tests.Dashboardtests),tests.Dashboardtests,null,null
+
+
+# Created at 2021-10-29T17:34:34.308
+Unexpected IOException: 9,1,tests.Dashboardtests,validSearchTest2(tests.Dashboardtests),null,chrome not reachable\000A  (Session info: chrome=95.0.4638.69)\000ABuild info: version: '4.0.0'\002C revision: '3a21814679'\000ASystem info: host: 'ROHIT'\002C ip: '192.168.1.100'\002C os.name: 'Windows 10'\002C os.arch: 'amd64'\002C os.version: '10.0'\002C java.version: '17'\000ADriver info: org.openqa.selenium.chrome.ChromeDriver\000ACommand: [5ec99343a611df03be91f7734086b446\002C get {url=https://www.YOUTUBE.COM}]\000ACapabilities {acceptInsecureCerts: false\002C browserName: chrome\002C browserVersion: 95.0.4638.69\002C chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b...\002C userDataDir: C:\005CUsers\005Crohit\005CAppData\005CLoca...}\002C goog:chromeOptions: {debuggerAddress: localhost:49935}\002C javascriptEnabled: true\002C networkConnectionEnabled: false\002C pageLoadStrategy: normal\002C platform: WINDOWS\002C platformName: WINDOWS\002C proxy: Proxy()\002C se:cdp: ws://localhost:49935/devtoo...\002C se:cdpVersion: 95.0.4638.69\002C setWindowRect: true\002C strictFileInteractability: false\002C timeouts: {implicit: 0\002C pageLoad: 300000\002C script: 30000}\002C unhandledPromptBehavior: dismiss and notify\002C webauthn:extension:credBlob: true\002C webauthn:extension:largeBlob: true\002C webauthn:virtualAuthenticators: true}\000ASession ID: 5ec99343a611df03be91f7734086b446,null
+
+
+# Created at 2021-10-29T17:34:34.448
+Unexpected IOException: 2,1,org.apache.maven.surefire.testng.TestNGXmlTestSuite,TestSuite,null,null,null
+
+

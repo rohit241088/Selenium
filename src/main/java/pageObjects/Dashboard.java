@@ -1,5 +1,6 @@
 package pageObjects;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.function.Consumer;
@@ -11,7 +12,6 @@ import org.testng.Assert;
 
 import src.baseClass2;
 import utils.LoggerClass;
-import utils.WebDriverEvents;
 import utils.WebDriverEvents2;
 
 public class Dashboard extends WebDriverEvents2{
@@ -43,6 +43,7 @@ public class Dashboard extends WebDriverEvents2{
 		
 		
 	public void validateResultWithSearch(String text){
+		int j=0;
 		boolean matching=false;
 		String[] searchParameters=text.split(" ");
 		Iterator<WebElement>elementIterator=serachResults().iterator();
@@ -52,9 +53,9 @@ public class Dashboard extends WebDriverEvents2{
 			for(int i=0;i<searchParameters.length;i++) {
 				String indexString=searchParameters[i];
 				LoggerClass.getLogger().debug("Verifying search value "
-			+indexString+ " against "+currentElementText);
+			+indexString+ " against "+currentElementText+ "at index value "+j);
 				System.out.println("Verifying search value "
-			+indexString+ " against "+currentElementText);
+			+indexString+ " against "+currentElementText+ "at index value "+j);
 				if(currentElementText.contains(indexString)) {
 matching=true;
 break;
@@ -63,28 +64,41 @@ break;
 					matching=false;
 				}
 			}
+			j++;
 			Assert.assertTrue(matching);
 		}
 	}
 		
 
 	public void checkSearchWithValidValue(String search_Value) {
+		int j=0;
 		boolean matching=false;
 		String[] searchParameters=search_Value.split(" ");
 		searchField().sendKeys(search_Value);
 		searchField().sendKeys(Keys.ARROW_DOWN);
 		searchField().sendKeys(Keys.ENTER);
+		List<String>allElementsText=new ArrayList<>();
+		System.out.println("Total Occurances "+serachResults().size());
+		serachResults().stream().forEach((a)->{
+			System.out.println("Original Occurances are "+a.getText());
+		}
+				);
 			//	WebDriverEvents.clickElement(searchButton());
 		Iterator<WebElement>elementIterator=serachResults().iterator();
+		while(elementIterator.hasNext()) {
+			allElementsText.add(elementIterator.next().getText());
+		}
+		
+		Iterator<String>iterator=allElementsText.iterator();
 		LoggerClass.getLogger().debug("Total resutls "+serachResults().size());
-			while(elementIterator.hasNext()) {
-			String currentElementText=elementIterator.next().getText();
+			while(iterator.hasNext()) {
+			String currentElementText=iterator.next();
 			for(int i=0;i<searchParameters.length;i++) {
 				String indexString=searchParameters[i];
 				LoggerClass.getLogger().debug("Verifying search value "
-			+indexString+ "against "+currentElementText);
+			+indexString+ "against "+currentElementText+" at index "+i);
 				System.out.println("Verifying search value "
-			+indexString+ "against "+currentElementText);
+			+indexString+ "against "+currentElementText+ "at index value "+j);
 				if(currentElementText.contains(indexString)) {
 matching=true;
 break;
@@ -93,10 +107,12 @@ break;
 					matching=false;
 				}
 			}
+			j++;
+			
 			Assert.assertTrue(matching);
 		}
-		
-			}
+			
+	}
 	public void checkSearchWithInvalidValue(String search_Value) {
 		searchField().sendKeys(search_Value);
 			searchButton().click();

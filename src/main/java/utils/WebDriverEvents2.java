@@ -96,8 +96,15 @@ public class WebDriverEvents2 extends baseClass2 {
 		   	 switch (locatorType) {
 				 		case "xpath":
 				 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(locatorValue)));
+				 			 try {
+					 				Thread.sleep(10000);
+					 			} catch (InterruptedException e) {
+					 				// TODO Auto-generated catch block
+					 				e.printStackTrace();
+					 			}
 				 			elements= driver.findElements(By.xpath(locatorValue));
 				 			logger.debug("Element located with "+locatorType+" "+locatorValue);
+				 			
 				 			break;
 				 		case "css":
 				 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(locatorValue)));
@@ -131,6 +138,7 @@ public class WebDriverEvents2 extends baseClass2 {
 				 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 				 			break;
 				 		}
+		   
 						return elements;
 				   
 				
@@ -234,7 +242,7 @@ public class WebDriverEvents2 extends baseClass2 {
 		
 		
 		public String getElementText(String elementKey) {
-	WebElement element=WebDriverEvents.returnElement(elementKey);
+	WebElement element=returnElement(elementKey);
 	String elementText="";
 					if(element!=null) {
 
@@ -246,7 +254,7 @@ public class WebDriverEvents2 extends baseClass2 {
 		}
 
 		public void moveMouseOver(String elementKey) {
-			WebElement element=WebDriverEvents.returnElement(elementKey);
+			WebElement element=returnElement(elementKey);
 				if(element!=null) {
 			Actions actions = new Actions(driver);
 			logger.debug("Hovering mouse over element "+elementKey.split("///")[0] );
@@ -258,9 +266,9 @@ public class WebDriverEvents2 extends baseClass2 {
 
 		public void dragElement(String sourceElementKey,String destElementKey) {
 			Actions actions = new Actions(driver);
-			WebElement source = WebDriverEvents.returnElement(sourceElementKey);
+			WebElement source = returnElement(sourceElementKey);
 					if(source!=null) {
-			WebElement destination = WebDriverEvents.returnElement(destElementKey);
+			WebElement destination = returnElement(destElementKey);
 			if(destination!=null) {
 				actions.dragAndDrop(source, destination).build().perform();
 				logger.debug("Dragging element from "+sourceElementKey.split("///")[0]+""
@@ -272,7 +280,7 @@ public class WebDriverEvents2 extends baseClass2 {
 		}
 
 		public Point getElementPoints(String elementKey) {
-			WebElement element=WebDriverEvents.returnElement(elementKey);
+			WebElement element=returnElement(elementKey);
 			if(element!=null) {
 				logger.debug("Returning element points"+element.getLocation().x+" "+
 						+element.getLocation().y);
@@ -308,9 +316,9 @@ public class WebDriverEvents2 extends baseClass2 {
 		
 		public void openLinkInNewTab(String elementKey) {
 			Actions actions=new Actions(driver);
-			WebDriverEvents.moveMouseOver(elementKey);
+			moveMouseOver(elementKey);
 			actionSendKeyEvent(Keys.CONTROL);
-		String elementHrefLink=WebDriverEvents.returnElement(elementKey).getAttribute("href");
+		String elementHrefLink=returnElement(elementKey).getAttribute("href");
 		switchToWindowUsingHrefLink(elementHrefLink);
 		
 		}
@@ -329,7 +337,7 @@ public class WebDriverEvents2 extends baseClass2 {
 		
 		
 		public void openLinkInNewWindow(String elementKey) {
-			WebDriverEvents.moveMouseOver(elementKey);
+			moveMouseOver(elementKey);
 			actionSendKeyEvent(Keys.SHIFT);
 		
 		}

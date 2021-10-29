@@ -5,8 +5,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import pageObjects.Dashboard;
-public class Dashboardtests{
-	private Dashboard dashboard=null;
+
+public class DashboardTest1 {
+private Dashboard dashboard=null;
 	
 	@BeforeMethod
 	public void initialize() {
@@ -16,14 +17,14 @@ public class Dashboardtests{
 	
 	@Test
 	public void validSearchTest() {
-		dashboard.checkSearchWithValidValue("Rohit Sharma");
+		dashboard.checkSearchWithValidValue("Virat Kohli");
 	//	dashboard.validateResultWithSearch("Rohit Sharma");
 	}
 
 	
 @Test
 	public void validSearchTest2() {
-	dashboard.performSearchWithValue("Rohit Sharma");
+	dashboard.performSearchWithValue("Virat Kohli");
 	dashboard.validateResultWithSearch(" ");
 	}
 	
@@ -32,10 +33,7 @@ public class Dashboardtests{
 	@AfterMethod
 public void closeBrowser() {
 		dashboard.closeBrowser();
-		dashboard.clearCurrentThreadDriver();
 		
 
 	}
-	
-	
 }

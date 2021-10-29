@@ -4,7 +4,9 @@
 	<test thread-count="5" name="Test" parallel='classes' >
 
 		<classes>
+			<class name="tests.DashboardTest1" />
 			<class name="tests.Dashboardtests" />
+		
 		</classes>
 
 	</test> <!-- Test -->

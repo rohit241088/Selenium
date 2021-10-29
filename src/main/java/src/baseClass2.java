@@ -96,9 +96,29 @@ private static ThreadLocal<WebDriver>driverThreads=null;
 			return driverThreads.get();
 		}
 		
+		public void clearCurrentThreadDriver() {
+			driverThreads.set(null);
+		}
+		
 		public void setupDriver() {
 			if(driverThreads==null) {
-			driverThreads=new ThreadLocal<>();
+				driverThreads=new ThreadLocal<>();
+				WebDriverEventListener events=null;
+				//this.setConfig();
+				String browser=this.config.getProperty("Driver");
+				switch(browser) {
+				case "Chrome":
+					System.setProperty("webdriver.chrome.driver", "C:\\Users\\rohit\\Downloads\\Compressed\\chromedriver_win32_2\\chromedriver.exe");
+					events=new WebDriverEventListener();
+					driver=new ChromeDriver();
+					driver=new EventFiringDecorator(events).decorate(driver);
+					driver.manage().window().maximize();
+					driverThreads.set(driver);
+			}
+			}
+			
+			if(driverThreads.get()==null) {
+				{			
 			WebDriverEventListener events=null;
 			//this.setConfig();
 			String browser=this.config.getProperty("Driver");
@@ -113,14 +133,16 @@ private static ThreadLocal<WebDriver>driverThreads=null;
 				}
 			}
 			}
+			}
 			
 		
 		public void loadAppURL(String url) {
-			if(driverThreads.get()==null) {
+			WebDriver driver=driverThreads.get();
+			if(driverThreads.get()==null||driverThreads==null) {
 				this.setupDriver();
 			}
 			logger.debug("Loading URL "+url+" in browser" );
-			driverThreads.get().get(config.getProperty("URL"));
+			driver.get(config.getProperty("URL"));
 			logger.debug("Loaded URL "+url+" in browser" );
 
 
@@ -156,7 +178,7 @@ private static ThreadLocal<WebDriver>driverThreads=null;
 
 
 		public WebDriver getDriver() {
-			return driverThreads.get();
+			return driver;
 		}
 
 
