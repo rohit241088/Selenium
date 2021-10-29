@@ -25,12 +25,12 @@ import src.baseClass2;
 
 public class WebDriverEvents2 extends baseClass2 {
 	private static Logger logger=LoggerClass.getLogger();
-	private WebDriver driver=null;
+	private static WebDriver driver=null;
 	
 	public WebDriverEvents2() {
 		driver=super.getThreadedDriver();
 	}
-	public WebDriver getDriver() {
+	public  WebDriver getDriver() {
 		return driver;
 	}
 	
@@ -96,12 +96,7 @@ public class WebDriverEvents2 extends baseClass2 {
 		   	 switch (locatorType) {
 				 		case "xpath":
 				 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(locatorValue)));
-				 			 try {
-					 				Thread.sleep(10000);
-					 			} catch (InterruptedException e) {
-					 				// TODO Auto-generated catch block
-					 				e.printStackTrace();
-					 			}
+				 			
 				 			elements= driver.findElements(By.xpath(locatorValue));
 				 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 				 			

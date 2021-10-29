@@ -24,8 +24,8 @@ private Dashboard dashboard=null;
 	
 @Test
 	public void validSearchTest2() {
-	dashboard.performSearchWithValue("Virat Kohli");
-	dashboard.validateResultWithSearch(" ");
+	dashboard.checkSearchWithValidValue("Virat Kohli");
+
 	}
 	
 	

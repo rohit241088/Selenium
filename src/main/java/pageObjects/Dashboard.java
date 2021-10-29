@@ -75,8 +75,7 @@ break;
 		boolean matching=false;
 		String[] searchParameters=search_Value.split(" ");
 		searchField().sendKeys(search_Value);
-		searchField().sendKeys(Keys.ARROW_DOWN);
-		searchField().sendKeys(Keys.ENTER);
+		searchButton().click();
 		List<String>allElementsText=new ArrayList<>();
 		System.out.println("Total Occurances "+serachResults().size());
 		serachResults().stream().forEach((a)->{
