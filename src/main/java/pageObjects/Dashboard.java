@@ -9,45 +9,40 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 
 import src.baseClass2;
 import utils.LoggerClass;
 import utils.WebDriverEvents2;
 
-public class Dashboard extends WebDriverEvents2{
+public class Dashboard{
 
 	
-	
-	private WebElement searchField() {
-		return super.returnElement("searchField");
-	}
 
-	private WebElement searchButton() {
-		return super.returnElement("searchButton");
+	private static WebElement searchButton() {
+		return WebDriverEvents2.returnElement("searchButton");
 	}
 	
-	private List<WebElement> serachResults() {
-		return super.returnElements("searchResultsTitle");
-		
-	}
 	
 
 	
 	
-	public void performSearchWithValue(String text){
-		searchField().sendKeys(text);
-		searchField().sendKeys(Keys.ARROW_DOWN);
-		searchField().sendKeys(Keys.ENTER);
-				
+	public static void performSearchWithValue(String text){
+		WebDriverEvents2.returnElement("searchField").sendKeys(text);
+		WebDriverEvents2.returnElement("searchField").sendKeys(Keys.ARROW_DOWN);
+		WebDriverEvents2.returnElement("searchField").sendKeys(Keys.ENTER);
+			
 	}
 		
 		
-	public void validateResultWithSearch(String text){
+	public static void validateResultWithSearch(String text){
 		int j=0;
 		boolean matching=false;
 		String[] searchParameters=text.split(" ");
-		Iterator<WebElement>elementIterator=serachResults().iterator();
-		LoggerClass.getLogger().debug("Total resutls "+serachResults().size());
+		List<WebElement>allSearchResults=WebDriverEvents2.returnElements("searchResultsTitle");
+		Iterator<WebElement>elementIterator=allSearchResults.iterator();
+		LoggerClass.getLogger().debug("Total resutls "+allSearchResults.size());
 			while(elementIterator.hasNext()) {
 			String currentElementText=elementIterator.next().getText();
 			for(int i=0;i<searchParameters.length;i++) {
@@ -70,27 +65,23 @@ break;
 	}
 		
 
-	public void checkSearchWithValidValue(String search_Value) {
+	public static void checkSearchWithValidValue(String search_Value) {
 		int j=0;
 		boolean matching=false;
 		String[] searchParameters=search_Value.split(" ");
-		searchField().sendKeys(search_Value);
-		searchField().sendKeys(Keys.ARROW_DOWN);
-		searchField().sendKeys(Keys.ENTER);
+		WebDriverEvents2.returnElement("searchField").sendKeys(search_Value);
+		WebDriverEvents2.returnElement("searchField").sendKeys(Keys.ARROW_DOWN);
+		WebDriverEvents2.returnElement("searchField").sendKeys(Keys.ENTER);
 		List<String>allElementsText=new ArrayList<>();
-		System.out.println("Total Occurances "+serachResults().size());
-		serachResults().stream().forEach((a)->{
-			System.out.println("Original Occurances are "+a.getText());
-		}
-				);
-			//	WebDriverEvents.clickElement(searchButton());
-		Iterator<WebElement>elementIterator=serachResults().iterator();
-		while(elementIterator.hasNext()) {
+		List<WebElement>allSearchResults=WebDriverEvents2.returnElements("searchResultsTitle");
+		Iterator<WebElement>elementIterator=allSearchResults.iterator();
+		System.out.println("Total Occurances "+allSearchResults.size());
+			while(elementIterator.hasNext()) {
 			allElementsText.add(elementIterator.next().getText());
 		}
 		
 		Iterator<String>iterator=allElementsText.iterator();
-		LoggerClass.getLogger().debug("Total resutls "+serachResults().size());
+		LoggerClass.getLogger().debug("Total resutls "+allSearchResults.size());
 			while(iterator.hasNext()) {
 			String currentElementText=iterator.next();
 			for(int i=0;i<searchParameters.length;i++) {
@@ -113,8 +104,5 @@ break;
 		}
 			
 	}
-	public void checkSearchWithInvalidValue(String search_Value) {
-		searchField().sendKeys(search_Value);
-			searchButton().click();
-	}
+	
 }

@@ -1,111 +1,38 @@
 DEBUG [TestNG-test=Test-2]: Initiailizatoin confirguration properties file
-DEBUG [TestNG-test=Test-1]: Initiailizatoin confirguration properties file
 DEBUG [TestNG-test=Test-2]: Loaded confirguration properties file with path D:\eclipse\first\youtube//DataFiles//config.properties
-DEBUG [TestNG-test=Test-1]: Loaded confirguration properties file with path D:\eclipse\first\youtube//DataFiles//config.properties
 DEBUG [TestNG-test=Test-2]: Initiailized confirguration properties file with following attributes
-DEBUG [TestNG-test=Test-1]: Initiailized confirguration properties file with following attributes
-DEBUG [TestNG-test=Test-1]: Initiailizatoin page object properties file
 DEBUG [TestNG-test=Test-2]: Initiailizatoin page object properties file
-DEBUG [TestNG-test=Test-1]: Object properties file path is D:\eclipse\first\youtube//DataFiles//pageObject.properties
 DEBUG [TestNG-test=Test-2]: Object properties file path is D:\eclipse\first\youtube//DataFiles//pageObject.properties
-DEBUG [TestNG-test=Test-1]: Loaded Object properties file
 DEBUG [TestNG-test=Test-2]: Loaded Object properties file
-DEBUG [TestNG-test=Test-2]: Loading URL https://www.YOUTUBE.COM in browser
-DEBUG [TestNG-test=Test-1]: Loading URL https://www.YOUTUBE.COM in browser
-DEBUG [TestNG-test=Test-1]: Loaded URL https://www.YOUTUBE.COM in browser
 DEBUG [TestNG-test=Test-1]: location element with pageObject key searchField
 DEBUG [TestNG-test=Test-1]: Element value from object properties file //input[@id="search"]///xpath
-DEBUG [TestNG-test=Test-2]: Loaded URL https://www.YOUTUBE.COM in browser
+DEBUG [TestNG-test=Test-1]: location element with pageObject key searchField
+DEBUG [TestNG-test=Test-1]: Element value from object properties file //input[@id="search"]///xpath
 DEBUG [TestNG-test=Test-2]: location element with pageObject key searchField
 DEBUG [TestNG-test=Test-2]: Element value from object properties file //input[@id="search"]///xpath
-DEBUG [TestNG-test=Test-1]: Element located with xpath //input[@id="search"]
 DEBUG [TestNG-test=Test-2]: Element located with xpath //input[@id="search"]
 DEBUG [TestNG-test=Test-2]: location element with pageObject key searchField
 DEBUG [TestNG-test=Test-2]: Element value from object properties file //input[@id="search"]///xpath
-DEBUG [TestNG-test=Test-1]: location element with pageObject key searchField
-DEBUG [TestNG-test=Test-1]: Element value from object properties file //input[@id="search"]///xpath
 DEBUG [TestNG-test=Test-2]: Element located with xpath //input[@id="search"]
-DEBUG [TestNG-test=Test-1]: Element located with xpath //input[@id="search"]
-DEBUG [TestNG-test=Test-1]: location element with pageObject key searchField
-DEBUG [TestNG-test=Test-1]: Element value from object properties file //input[@id="search"]///xpath
-DEBUG [TestNG-test=Test-1]: Element located with xpath //input[@id="search"]
 DEBUG [TestNG-test=Test-2]: location element with pageObject key searchField
 DEBUG [TestNG-test=Test-2]: Element value from object properties file //input[@id="search"]///xpath
-DEBUG [TestNG-test=Test-1]: location element with pageObject key searchResultsTitle
-DEBUG [TestNG-test=Test-1]: Element value from object properties file searchResultsTitle
 DEBUG [TestNG-test=Test-2]: Element located with xpath //input[@id="search"]
 DEBUG [TestNG-test=Test-2]: location element with pageObject key searchResultsTitle
 DEBUG [TestNG-test=Test-2]: Element value from object properties file searchResultsTitle
-DEBUG [TestNG-test=Test-1]: Element located with xpath //a[@id="video-title"]
-DEBUG [TestNG-test=Test-1]: location element with pageObject key searchResultsTitle
-DEBUG [TestNG-test=Test-1]: Element value from object properties file searchResultsTitle
-DEBUG [TestNG-test=Test-2]: Element located with xpath //a[@id="video-title"]
-DEBUG [TestNG-test=Test-2]: location element with pageObject key searchResultsTitle
-DEBUG [TestNG-test=Test-2]: Element value from object properties file searchResultsTitle
-DEBUG [TestNG-test=Test-1]: Element located with xpath //a[@id="video-title"]
-DEBUG [TestNG-test=Test-2]: Element located with xpath //a[@id="video-title"]
-DEBUG [TestNG-test=Test-1]: location element with pageObject key searchResultsTitle
-DEBUG [TestNG-test=Test-1]: Element value from object properties file searchResultsTitle
-DEBUG [TestNG-test=Test-2]: location element with pageObject key searchResultsTitle
-DEBUG [TestNG-test=Test-2]: Element value from object properties file searchResultsTitle
-DEBUG [TestNG-test=Test-1]: Element located with xpath //a[@id="video-title"]
-DEBUG [TestNG-test=Test-1]: location element with pageObject key searchResultsTitle
-DEBUG [TestNG-test=Test-1]: Element value from object properties file searchResultsTitle
-DEBUG [TestNG-test=Test-2]: Element located with xpath //a[@id="video-title"]
-DEBUG [TestNG-test=Test-2]: location element with pageObject key searchResultsTitle
-DEBUG [TestNG-test=Test-2]: Element value from object properties file searchResultsTitle
-DEBUG [TestNG-test=Test-1]: Element located with xpath //a[@id="video-title"]
-DEBUG [TestNG-test=Test-1]: Total resutls 23
-DEBUG [TestNG-test=Test-1]: Verifying search value Viratagainst Kunal Pandya: Virat Kohli's abs or Hardik's? at index 0
-DEBUG [TestNG-test=Test-1]: Verifying search value Viratagainst Virat Kohli On Dressing Room Music, Dhawan's Humour, his Salesman Skills & Dhoni I BwC S4E1 | Part 1 at index 0
-DEBUG [TestNG-test=Test-1]: Verifying search value Viratagainst Team India Practice session - Virat Kohli , Rohit Sharma , Hardik Pandya , Shami and MS Dhoni | at index 0
-DEBUG [TestNG-test=Test-1]: Verifying search value Viratagainst Virat Kohli angry net session before Do-or-Die Match against NZ ? at index 0
-DEBUG [TestNG-test=Test-1]: Verifying search value Viratagainst ZEE Hindustan LIVE News | Delhi Border ?? ??? ????????????? ?? ???? | Aryan Khan | Shah Rukh Khan at index 0
-DEBUG [TestNG-test=Test-1]: Verifying search value Kohliagainst ZEE Hindustan LIVE News | Delhi Border ?? ??? ????????????? ?? ???? | Aryan Khan | Shah Rukh Khan at index 1
-DEBUG [TestNG-test=Test-1]: Initiailizatoin confirguration properties file
-DEBUG [TestNG-test=Test-1]: Loaded confirguration properties file with path D:\eclipse\first\youtube//DataFiles//config.properties
-DEBUG [TestNG-test=Test-1]: Initiailized confirguration properties file with following attributes
-DEBUG [TestNG-test=Test-1]: Initiailizatoin page object properties file
-DEBUG [TestNG-test=Test-1]: Object properties file path is D:\eclipse\first\youtube//DataFiles//pageObject.properties
-DEBUG [TestNG-test=Test-1]: Loaded Object properties file
-DEBUG [TestNG-test=Test-1]: Loading URL https://www.YOUTUBE.COM in browser
 DEBUG [TestNG-test=Test-2]: Element located with xpath //a[@id="video-title"]
 DEBUG [TestNG-test=Test-2]: Total resutls 26
 DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst India Vs Pakistan T20 WC: How Virat Kohli Defends Rohit Sharma | NewsMo at index 0
 DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Virat Kohli left baffled as reporter asks if India will drop Rohit Sharma in coming matches at index 0
 DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Wasim Akram Reveals Why Rohit Sharma Is His Favourite Indian Player: India Vs Pakistan T20 Match at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit Sharma: NZ ?? ????? ???? ??????? ???????? ?????? /DCNews at index 0
 DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit Sharma - Top Run-Scorer | ICC Cricket World Cup 2019 | Best Bits at index 0
+DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst From the Vault: Rohit belts unbeaten 171 at the WACA at index 0
 DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Team India Practice session - Virat Kohli , Rohit Sharma , Hardik Pandya , Shami and MS Dhoni | at index 0
 DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst LIVE TV INSULTS - Pakistan - India - Newzeeland - Rohit Sharma - Shoib Akhtar at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit Sharma scores 4th T20 international hundred most by any batsman in history vs westindies at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst From the Vault: Rohit belts unbeaten 171 at the WACA at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit's Sublime 127 | 4th Test Day 3 | India Tour Of England 2021 at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst The Virat-Rohit Saga - Part 2 | The Burden of Captaincy | Fracture - Year 2013-2019 | Indian Cricket at index 0
+DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit Sharma vs west indies at index 0
 DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit Sharma On Marrying 'Yuvi's Sister' Ritika, Mumbai Indians & Humiliations | BwC S4E8 | Part 1 at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Brilliant Rohit nearly steals the show | Gillette ODI Series v India | 2018-19 at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit's Majestic 127 | 4th Test Day 3 | India Tour Of England 2021 | Hindi at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit 264(173) highlights Ind vs sl Rohit destructive batting #rohit at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst MS Dhoni vs Sachin Tendulkar vs Virat Kohli vs Rohit Sharma Comparison 2021, Career, Net Worth at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Kapil Has A Offer For Rohit Shetty | The Kapil Sharma Show | SET India Rewind 2020 at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst INDvPAK : What Happened Between Rohit Sharma & Babar Azam before Match | Cricbolly || at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Sharma Stars In Thriller | SUPER OVER REPLAY | BLACKCAPS v India - 3rd T20, 2020 at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Sharmaagainst Sharma Stars In Thriller | SUPER OVER REPLAY | BLACKCAPS v India - 3rd T20, 2020 at index 1
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Team India Photoshoot Of T20 World Cup 2021 | Virat Kohli , Rohit Sharma Behind the scenes Video at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit Sharma Batting | Rohit Sharma Batting Practice | Indian Cricket Team Practice Session at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit Sharma opens up to Dinesh Karthik | The highs, lows & what movies he's cried at ?| Interview at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit Sharma stopped bowling for Team India ? Rohit was India's specialist part-timer at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit Sharma Hits 140! | India v Pakistan - Match Highlights | ICC Cricket World Cup 2019 at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit Sharma amazing century against Australia II Rohit Centuries Against Australia. Rohit Century at index 0
-DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Virat Kohli's reaction on controversial question about Rohit Sharma in playing XI ?? #short at index 0
-DEBUG [TestNG-test=Test-2]: Initiailizatoin confirguration properties file
-DEBUG [TestNG-test=Test-2]: Loaded confirguration properties file with path D:\eclipse\first\youtube//DataFiles//config.properties
-DEBUG [TestNG-test=Test-2]: Initiailized confirguration properties file with following attributes
-DEBUG [TestNG-test=Test-2]: Initiailizatoin page object properties file
-DEBUG [TestNG-test=Test-2]: Object properties file path is D:\eclipse\first\youtube//DataFiles//pageObject.properties
-DEBUG [TestNG-test=Test-2]: Loaded Object properties file
-DEBUG [TestNG-test=Test-2]: Loading URL https://www.YOUTUBE.COM in browser
-DEBUG [TestNG-test=Test-2]: Loaded URL https://www.YOUTUBE.COM in browser
+DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst Rohit's Sublime 127 | 4th Test Day 3 | India Tour Of England 2021 at index 0
+DEBUG [TestNG-test=Test-2]: Verifying search value Rohitagainst amazing batting of hitman rohit sharma at index 0
+DEBUG [TestNG-test=Test-2]: Verifying search value Sharmaagainst amazing batting of hitman rohit sharma at index 1
 DEBUG [TestNG-test=Test-2]: location element with pageObject key searchField
 DEBUG [TestNG-test=Test-2]: Element value from object properties file //input[@id="search"]///xpath
 DEBUG [TestNG-test=Test-2]: Element located with xpath //input[@id="search"]
@@ -115,9 +42,6 @@ DEBUG [TestNG-test=Test-2]: Element located with xpath //input[@id="search"]
 DEBUG [TestNG-test=Test-2]: location element with pageObject key searchField
 DEBUG [TestNG-test=Test-2]: Element value from object properties file //input[@id="search"]///xpath
 DEBUG [TestNG-test=Test-2]: Element located with xpath //input[@id="search"]
-DEBUG [TestNG-test=Test-2]: location element with pageObject key searchResultsTitle
-DEBUG [TestNG-test=Test-2]: Element value from object properties file searchResultsTitle
-DEBUG [TestNG-test=Test-2]: Element located with xpath //a[@id="video-title"]
 DEBUG [TestNG-test=Test-2]: location element with pageObject key searchResultsTitle
 DEBUG [TestNG-test=Test-2]: Element value from object properties file searchResultsTitle
 DEBUG [TestNG-test=Test-2]: Element located with xpath //a[@id="video-title"]

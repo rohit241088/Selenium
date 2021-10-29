@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.Dashboard;
 
-public class DashboardTest1 {
+public class DashboardTest1 extends BaseTest{
 private Dashboard dashboard=null;
 	
 	@BeforeMethod
@@ -17,22 +17,22 @@ private Dashboard dashboard=null;
 	
 	@Test
 	public void validSearchTest() {
-		dashboard.checkSearchWithValidValue("Virat Kohli");
+		Dashboard.checkSearchWithValidValue("Virat Kohli");
 	//	dashboard.validateResultWithSearch("Rohit Sharma");
 	}
 
 	
 @Test
 	public void validSearchTest2() {
-	dashboard.performSearchWithValue("Virat Kohli");
-	dashboard.validateResultWithSearch(" ");
+	Dashboard.performSearchWithValue("Virat Kohli");
+	Dashboard.validateResultWithSearch(" ");
 	}
 	
 	
 	
 	@AfterMethod
 public void closeBrowser() {
-		dashboard.closeBrowser();
+		dashboard=null;
 		
 
 	}

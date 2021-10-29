@@ -23,20 +23,21 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import src.baseClass2;
 
-public class WebDriverEvents2 extends baseClass2 {
+public class WebDriverEvents2{
 	private static Logger logger=LoggerClass.getLogger();
-	private WebDriver driver=null;
-	
-	public WebDriverEvents2() {
-		driver=super.getThreadedDriver();
-	}
-	public WebDriver getDriver() {
-		return driver;
-	}
-	
-		public WebElement returnElement(String elementKey) {
+		private static WebDriver driver=null;
+		
+		public static void setDriver(WebDriver driver) {
+			WebDriverEvents2.driver=driver;
+		}
+		
+		public static WebDriver getDriver() {
+			return driver;
+		}
+		
+		public static WebElement returnElement(String elementKey) {
 			logger.debug("location element with pageObject key "+elementKey);
-			String element=super.getProperties().getProperty(elementKey);
+			String element=baseClass2.getProperties().getProperty(elementKey);
 			logger.debug("Element value from object properties file "+element);
 			String locatorType=element.split("///")[1];
 			String locatorValue=element.split("///")[0];
@@ -85,10 +86,10 @@ public class WebDriverEvents2 extends baseClass2 {
 		}
 		
 
-		public List<WebElement> returnElements(String elementKey) {
+		public static List<WebElement> returnElements(String elementKey) {
 			Wait<WebDriver>wait=new WebDriverWait(driver, Duration.ofSeconds(20));
 			logger.debug("location element with pageObject key "+elementKey);
-			String element=super.getProperties().getProperty(elementKey);
+			String element=baseClass2.getProperties().getProperty(elementKey);
 			logger.debug("Element value from object properties file "+elementKey);
 			String locatorType=element.split("///")[1];
 			String locatorValue=element.split("///")[0];
@@ -96,12 +97,7 @@ public class WebDriverEvents2 extends baseClass2 {
 		   	 switch (locatorType) {
 				 		case "xpath":
 				 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(locatorValue)));
-				 			 try {
-					 				Thread.sleep(10000);
-					 			} catch (InterruptedException e) {
-					 				// TODO Auto-generated catch block
-					 				e.printStackTrace();
-					 			}
+				 			
 				 			elements= driver.findElements(By.xpath(locatorValue));
 				 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 				 			
@@ -144,27 +140,26 @@ public class WebDriverEvents2 extends baseClass2 {
 				
 		}
 
-		public void clickElement(WebElement element) {
-			
-						element.click();
-					logger.debug("Clicked element");
+		public static void clickElement(String elementKey) {
+			WebDriverEvents2.returnElement(elementKey).click();
+			logger.debug("Clicked element "+elementKey);
 				}
 		
 
-		public void typeInToElement(WebElement element, String textToEnter) {
+		public static void typeInToElement(String elementKey, String textToEnter) {
 			
-			if(element!=null) {
-				logger.debug("Typing into element "+" value"+textToEnter);
-				element.sendKeys(textToEnter);
-				logger.debug("Typed into element "+" value"+textToEnter);
+		
+				logger.debug("Typing into element "+elementKey+" the value"+textToEnter);
+				WebDriverEvents2.returnElement(elementKey).sendKeys(textToEnter);
+				logger.debug("Typed value "+textToEnter+" into element ");
 
-			}
+			
 		}
 
-		public void clearTextElement(WebElement element) {
-			
-				while(element.getText()!="") {
+		public static void clearElementText(String elementKey) {
+			WebElement element=WebDriverEvents2.returnElement(elementKey);
 
+				while(element.getText()!="") {
 					element.sendKeys(Keys.BACK_SPACE);
 				}
 				logger.debug("Cleared value from element");
@@ -172,21 +167,21 @@ public class WebDriverEvents2 extends baseClass2 {
 			
 		}
 
-		public void maximizeWindow() {
+		public static void maximizeWindow() {
 		logger.debug("Setting browser to maximize ");
 			driver.manage().window().maximize();
 		logger.debug("Browser maximized ");
 
 		}
 		
-		public void minimizeWindow() {
+		public static void minimizeWindow() {
 			logger.debug("Setting browser to minimize ");
 			driver.manage().window().minimize();
 			logger.debug("Browser minimized ");
 
 		}
 		
-		public void resizeWindow( int width,int height) {
+		public static void resizeWindow(int width,int height) {
 			logger.debug("Resizing browser window to hgight "+height+" and width "+width );
 			Dimension dimensions=new Dimension(width,height);
 			driver.manage().window().setSize(dimensions);
@@ -195,7 +190,7 @@ public class WebDriverEvents2 extends baseClass2 {
 		}
 		
 		
-		public void setFullScreenWindow() {
+		public static void setFullScreenWindow() {
 			logger.debug("Resizing browser window to full screen" );
 			driver.manage().window().fullscreen();
 			logger.debug("Browser set to full screen" );
@@ -233,27 +228,25 @@ public class WebDriverEvents2 extends baseClass2 {
 
 		}
 		
-		
-		public void implicitWait(String URL) {
-			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
-		}
+			
 		
 		
-		
-		
-		public String getElementText(String elementKey) {
+		public static String getElementText(String elementKey) {
 	WebElement element=returnElement(elementKey);
 	String elementText="";
 					if(element!=null) {
-
-			elementText=element.getText();
+						if(element.getText()!="")
+						{
+							elementText=element.getText();	
+						}
+			
 			logger.debug("Fetched text" +elementText+" from  "+elementKey.split("///")[0] );
 
 					}
 					return elementText;
 		}
 
-		public void moveMouseOver(String elementKey) {
+		public static void moveMouseOver(String elementKey) {
 			WebElement element=returnElement(elementKey);
 				if(element!=null) {
 			Actions actions = new Actions(driver);
@@ -264,7 +257,7 @@ public class WebDriverEvents2 extends baseClass2 {
 				}
 		}
 
-		public void dragElement(String sourceElementKey,String destElementKey) {
+		public static void dragAndDropElement(String sourceElementKey,String destElementKey) {
 			Actions actions = new Actions(driver);
 			WebElement source = returnElement(sourceElementKey);
 					if(source!=null) {
@@ -279,7 +272,7 @@ public class WebDriverEvents2 extends baseClass2 {
 			}
 		}
 
-		public Point getElementPoints(String elementKey) {
+		public static Point getElementPoints(String elementKey) {
 			WebElement element=returnElement(elementKey);
 			if(element!=null) {
 				logger.debug("Returning element points"+element.getLocation().x+" "+
@@ -291,30 +284,30 @@ public class WebDriverEvents2 extends baseClass2 {
 			return null;
 		}
 
-		public String getPageSource() {
+		public static String getPageSource() {
 			logger.debug("Returning page source of web page ");
 			return driver.getPageSource();
 
 		}
 
-		public String getCurrentURL() {
+		public static String getCurrentURL() {
 			logger.debug("Returning current URL of application "+driver.getCurrentUrl());
 
 			return driver.getCurrentUrl();
 		}
 
-		public String getCurrentWindow() {
+		public static String getCurrentWindow() {
 			logger.debug("Fetching current window string ");
 			return driver.getWindowHandle();
 		}
 
-		public String getPageTitle() {
+		public static String getPageTitle() {
 			logger.debug("Fetching current page title "+driver.getTitle());
 			return driver.getTitle();
 		}
 		
 		
-		public void openLinkInNewTab(String elementKey) {
+		public static void openLinkInNewTab(String elementKey) {
 			Actions actions=new Actions(driver);
 			moveMouseOver(elementKey);
 			actionSendKeyEvent(Keys.CONTROL);
@@ -324,7 +317,7 @@ public class WebDriverEvents2 extends baseClass2 {
 		}
 
 		
-		private void actionSendKeyEvent(CharSequence ch) {
+		private static void actionSendKeyEvent(CharSequence ch) {
 			Actions actions=new Actions(driver);
 			logger.debug("Sending action event "+ch);
 
@@ -336,13 +329,15 @@ public class WebDriverEvents2 extends baseClass2 {
 		}
 		
 		
-		public void openLinkInNewWindow(String elementKey) {
+		public static void openLinkInNewWindow(String elementKey) {
 			moveMouseOver(elementKey);
 			actionSendKeyEvent(Keys.SHIFT);
-		
+			actionSendKeyEvent(Keys.ENTER);
+
+				
 		}
 
-		public boolean switchToWindowUsingTitle(String titleOfWindow) {
+		public static boolean switchToWindowUsingTitle(String titleOfWindow) {
 			boolean switched = false;
 			logger.debug("checking total number of windows opened currently");
 
@@ -374,7 +369,7 @@ public class WebDriverEvents2 extends baseClass2 {
 			return switched;
 		}
 
-		public boolean switchToWindowUsingHrefLink(String elementHrefLink) {
+		public static boolean switchToWindowUsingHrefLink(String elementHrefLink) {
 			boolean switched = false;
 			Set<String> allWindows = driver.getWindowHandles();
 			Iterator<String> iterator = allWindows.iterator();
@@ -400,13 +395,18 @@ public class WebDriverEvents2 extends baseClass2 {
 			return switched;
 		}
 		
-		public void executeJavaScript(WebElement element) {
+		public static void executeJavaScript(WebElement element) {
 			JavascriptExecutor js=(JavascriptExecutor)driver;
 			js.executeScript("arguments[0].click();", element);
 		}
 		
-		public void closeBrowser() {
+		public static void closeBrowser() {
 			driver.close();
 		}
+		
+		public static void LoadURL(String URL) {
+			driver.get(URL);
+		}
+		
 
 }
