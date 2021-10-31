@@ -2,48 +2,56 @@
 <testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-31T20:01:57 IST" name="Suite" finished-at="2021-10-31T20:02:26 IST" duration-ms="28641">
+  <suite started-at="2021-10-31T20:45:39 IST" name="Suite" finished-at="2021-10-31T20:46:04 IST" duration-ms="24684">
     <groups>
     </groups>
-    <test started-at="2021-10-31T20:01:57 IST" name="Test" finished-at="2021-10-31T20:02:26 IST" duration-ms="28641">
+    <test started-at="2021-10-31T20:45:39 IST" name="Test" finished-at="2021-10-31T20:46:04 IST" duration-ms="24684">
       <class name="tests.DashboardTest1">
-        <test-method is-config="true" signature="setupConfig()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:01:57 IST" name="setupConfig" finished-at="2021-10-31T20:01:57 IST" duration-ms="26" status="PASS">
+        <test-method is-config="true" signature="setupConfig()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:45:39 IST" name="setupConfig" finished-at="2021-10-31T20:45:39 IST" duration-ms="37" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupConfig -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:01:57 IST" name="setUpTest" finished-at="2021-10-31T20:02:15 IST" duration-ms="17154" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:45:39 IST" name="setUpTest" finished-at="2021-10-31T20:45:55 IST" duration-ms="15672" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method is-config="true" signature="setUpTest()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:01:57 IST" name="setUpTest" finished-at="2021-10-31T20:02:14 IST" duration-ms="16387" status="PASS">
+        <test-method is-config="true" signature="setUpTest()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:45:39 IST" name="setUpTest" finished-at="2021-10-31T20:45:56 IST" duration-ms="16625" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpTest -->
-        <test-method is-config="true" signature="initializePage()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:02:14 IST" name="initializePage" finished-at="2021-10-31T20:02:14 IST" duration-ms="3" status="PASS">
+        <test-method is-config="true" signature="initializePage()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:45:55 IST" name="initializePage" finished-at="2021-10-31T20:45:55 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializePage -->
-        <test-method signature="validSearchTest1()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:02:14 IST" name="validSearchTest1" finished-at="2021-10-31T20:02:25 IST" duration-ms="11494" status="FAIL">
+        <test-method signature="validSearchTest1()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:45:55 IST" name="validSearchTest1" finished-at="2021-10-31T20:46:02 IST" duration-ms="7042" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSearchTest1 -->
+        <test-method is-config="true" signature="initializePage()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:45:56 IST" name="initializePage" finished-at="2021-10-31T20:45:56 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializePage -->
+        <test-method signature="validSearchTest()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:45:56 IST" name="validSearchTest" finished-at="2021-10-31T20:46:03 IST" duration-ms="7419" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchSessionException">
             <message>
               <![CDATA[invalid session id
 Build info: version: '4.0.0', revision: '3a21814679'
 System info: host: 'ROHIT', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [66078363514358574667b402e07478b0, getElementText {id=285d7508-2002-4daf-b6a0-a54e8ec06967}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b..., userDataDir: C:\Users\rohit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58469}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58469/devtoo..., se:cdpVersion: 95.0.4638.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (66078363514358574667b402e07478b0)] -> xpath: //a[@id="video-title"]]
-Session ID: 66078363514358574667b402e07478b0]]>
+Command: [641527e0da5b75f03c6ef87a7cea2228, getElementText {id=2bd012de-f566-4366-ba5b-36e93d4ff867}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b..., userDataDir: C:\Users\rohit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64087}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64087/devtoo..., se:cdpVersion: 95.0.4638.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (641527e0da5b75f03c6ef87a7cea2228)] -> xpath: //a[@id="video-title"]]
+Session ID: 641527e0da5b75f03c6ef87a7cea2228]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchSessionException: invalid session id
 Build info: version: '4.0.0', revision: '3a21814679'
 System info: host: 'ROHIT', ip: '192.168.1.105', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [66078363514358574667b402e07478b0, getElementText {id=285d7508-2002-4daf-b6a0-a54e8ec06967}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b..., userDataDir: C:\Users\rohit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58469}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58469/devtoo..., se:cdpVersion: 95.0.4638.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (66078363514358574667b402e07478b0)] -> xpath: //a[@id="video-title"]]
-Session ID: 66078363514358574667b402e07478b0
+Command: [641527e0da5b75f03c6ef87a7cea2228, getElementText {id=2bd012de-f566-4366-ba5b-36e93d4ff867}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b..., userDataDir: C:\Users\rohit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64087}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64087/devtoo..., se:cdpVersion: 95.0.4638.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (641527e0da5b75f03c6ef87a7cea2228)] -> xpath: //a[@id="video-title"]]
+Session ID: 641527e0da5b75f03c6ef87a7cea2228
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -66,7 +74,7 @@ at org.openqa.selenium.support.decorators.DefaultDecorated.call(DefaultDecorated
 at org.openqa.selenium.support.decorators.WebDriverDecorator.lambda$createProxy$0(WebDriverDecorator.java:294)
 at org.openqa.selenium.support.decorators.$Proxy17.getText(Unknown Source)
 at pageObjects.Dashboard.verifySearchResults(Dashboard.java:50)
-at tests.DashboardTest1.validSearchTest1(DashboardTest1.java:48)
+at tests.DashboardTest1.validSearchTest(DashboardTest1.java:38)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -87,20 +95,12 @@ at java.base/java.lang.Thread.run(Thread.java:833)
           </exception> <!-- org.openqa.selenium.NoSuchSessionException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validSearchTest1 -->
-        <test-method is-config="true" signature="initializePage()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:02:15 IST" name="initializePage" finished-at="2021-10-31T20:02:15 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializePage -->
-        <test-method signature="validSearchTest()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:02:15 IST" name="validSearchTest" finished-at="2021-10-31T20:02:25 IST" duration-ms="10055" status="PASS">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- validSearchTest -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:02:25 IST" name="closeBrowser" finished-at="2021-10-31T20:02:25 IST" duration-ms="345" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:46:02 IST" name="closeBrowser" finished-at="2021-10-31T20:46:03 IST" duration-ms="980" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:02:25 IST" name="closeBrowser" finished-at="2021-10-31T20:02:26 IST" duration-ms="610" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.DashboardTest1@4bb33f74]" started-at="2021-10-31T20:46:03 IST" name="closeBrowser" finished-at="2021-10-31T20:46:04 IST" duration-ms="483" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->

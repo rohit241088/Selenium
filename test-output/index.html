@@ -104,7 +104,7 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.DashboardTest1" class="method navigator-link" hash-for-method="validSearchTest1">validSearchTest1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.DashboardTest1" class="method navigator-link" hash-for-method="validSearchTest">validSearchTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -118,7 +118,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="tests.DashboardTest1" class="method navigator-link" hash-for-method="validSearchTest">validSearchTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="tests.DashboardTest1" class="method navigator-link" hash-for-method="validSearchTest1">validSearchTest1</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -141,17 +141,17 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validSearchTest1">
-                  </a> <!-- validSearchTest1 -->
-                  <span class="method-name">validSearchTest1</span>
+                  <a name="validSearchTest">
+                  </a> <!-- validSearchTest -->
+                  <span class="method-name">validSearchTest</span>
                   <div class="stack-trace">org.openqa.selenium.NoSuchSessionException: invalid session id
 Build info: version: &apos;4.0.0&apos;, revision: &apos;3a21814679&apos;
 System info: host: &apos;ROHIT&apos;, ip: &apos;192.168.1.105&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [66078363514358574667b402e07478b0, getElementText {id=285d7508-2002-4daf-b6a0-a54e8ec06967}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b..., userDataDir: C:\Users\rohit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58469}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58469/devtoo..., se:cdpVersion: 95.0.4638.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (66078363514358574667b402e07478b0)] -&gt; xpath: //a[@id=&quot;video-title&quot;]]
-Session ID: 66078363514358574667b402e07478b0
+Command: [641527e0da5b75f03c6ef87a7cea2228, getElementText {id=2bd012de-f566-4366-ba5b-36e93d4ff867}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 95.0.4638.69, chrome: {chromedriverVersion: 95.0.4638.17 (a9d0719444d4b..., userDataDir: C:\Users\rohit\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:64087}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64087/devtoo..., se:cdpVersion: 95.0.4638.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (641527e0da5b75f03c6ef87a7cea2228)] -&gt; xpath: //a[@id=&quot;video-title&quot;]]
+Session ID: 641527e0da5b75f03c6ef87a7cea2228
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -166,7 +166,7 @@ Session ID: 66078363514358574667b402e07478b0
 	at org.openqa.selenium.support.decorators.WebDriverDecorator.lambda$createProxy$0(WebDriverDecorator.java:294)
 	at org.openqa.selenium.support.decorators.$Proxy17.getText(Unknown Source)
 	at pageObjects.Dashboard.verifySearchResults(Dashboard.java:50)
-	at tests.DashboardTest1.validSearchTest1(DashboardTest1.java:48)
+	at tests.DashboardTest1.validSearchTest(DashboardTest1.java:38)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
@@ -184,9 +184,9 @@ Session ID: 66078363514358574667b402e07478b0
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="validSearchTest">
-                  </a> <!-- validSearchTest -->
-                  <span class="method-name">validSearchTest</span>
+                  <a name="validSearchTest1">
+                  </a> <!-- validSearchTest1 -->
+                  <span class="method-name">validSearchTest1</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -248,18 +248,18 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validSearchTest1')
+data.setCell(0, 1, 'validSearchTest')
 data.setCell(0, 2, 'tests.DashboardTest1')
-data.setCell(0, 3, 11494);
+data.setCell(0, 3, 7419);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validSearchTest')
+data.setCell(1, 1, 'validSearchTest1')
 data.setCell(1, 2, 'tests.DashboardTest1')
-data.setCell(1, 3, 10055);
+data.setCell(1, 3, 7042);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 14 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -292,37 +292,37 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">97 ms</span>
+                <span class="method-start">108 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">setUpTest</span>
-                <span class="method-start">97 ms</span>
+                <span class="method-start">108 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method before">
                 <span class="method-name">initializePage</span>
-                <span class="method-start">16488 ms</span>
+                <span class="method-start">15783 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">validSearchTest1</span>
+                <span class="method-start">15788 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">initializePage</span>
+                <span class="method-start">16733 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">validSearchTest1</span>
-                <span class="method-start">16491 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">initializePage</span>
-                <span class="method-start">17251 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
                 <span class="method-name">validSearchTest</span>
-                <span class="method-start">17252 ms</span>
+                <span class="method-start">16734 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">27322 ms</span>
+                <span class="method-start">22840 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">closeBrowser</span>
-                <span class="method-start">28009 ms</span>
+                <span class="method-start">24173 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
