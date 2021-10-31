@@ -1,9 +1,11 @@
 package utils;
 
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.function.Function;
@@ -21,57 +23,56 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import src.baseClass2;
 
-public class WebDriverEvents2 extends baseClass2 {
-	private static Logger logger=LoggerClass.getLogger();
+public class WebDriverEvents2 {
 	private static WebDriver driver=null;
-	
-	public WebDriverEvents2() {
-		driver=super.getThreadedDriver();
+	public WebDriverEvents2(WebDriver driver) {
+		WebDriverEvents2.driver=driver;
 	}
-	public  WebDriver getDriver() {
-		return driver;
-	}
+	private static Logger logger=LoggerClass.getLogger();
 	
-		public WebElement returnElement(String elementKey) {
-			logger.debug("location element with pageObject key "+elementKey);
-			String element=super.getProperties().getProperty(elementKey);
+
+		public WebElement returnElement(String elementkey) {
+			String element=elementkey;
+			logger.debug("location element with pageObject key "+element);
 			logger.debug("Element value from object properties file "+element);
 			String locatorType=element.split("///")[1];
 			String locatorValue=element.split("///")[0];
-				FluentWait<WebDriver>wait=new FluentWait<>(driver).withTimeout(Duration.ofSeconds(20)).
-						pollingEvery(Duration.ofMillis(10)).ignoring(NoSuchElementException.class);
+			FluentWait<WebDriver>wait=new FluentWait<>(driver).withTimeout(Duration.ofSeconds(20)).
+			pollingEvery(Duration.ofMillis(10)).ignoring(NoSuchElementException.class);
 				 WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
-				     public WebElement apply(WebDriver driver) {
+				     public WebElement apply(WebDriver driverLocal) {
+				    	 driverLocal=driver;
 				    	 WebElement element=null;
-				     switch (locatorType) {
+				     switch (locatorType.toLowerCase()) {
 				 		case "xpath":
-				 			element=driver.findElement(By.xpath(locatorValue));
+				 			element=driverLocal.findElement(By.xpath(locatorValue));
 				 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 				 			break;
 				 		case "css":
-				 			element = driver.findElement(By.cssSelector(locatorValue));
+				 			element = driverLocal.findElement(By.cssSelector(locatorValue));
 				 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 				 			break;
 				 		case "tagName":
-				 			element = driver.findElement(By.tagName(locatorValue));
+				 			element = driverLocal.findElement(By.tagName(locatorValue));
 				 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 				 			break;
 				 		case "id":
-				 			element = driver.findElement(By.id(locatorValue));
+				 			element = driverLocal.findElement(By.id(locatorValue));
 				 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 				 			break;
 				 		case "className":
-				 			element = driver.findElement(By.className(locatorValue));
+				 			element = driverLocal.findElement(By.className(locatorValue));
 				 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 				 			break;
 				 		case "linkText":
-				 			element = driver.findElement(By.linkText(locatorValue));
+				 			element = driverLocal.findElement(By.linkText(locatorValue));
 				 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 				 			break;
 				 		case "partialLinkText":
-				 			element = driver.findElement(By.partialLinkText(locatorValue));
+				 			element = driverLocal.findElement(By.partialLinkText(locatorValue));
 				 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 				 			break;
 				 		}
@@ -83,17 +84,16 @@ public class WebDriverEvents2 extends baseClass2 {
 			return foo;
 
 		}
-		
-
-		public List<WebElement> returnElements(String elementKey) {
-			Wait<WebDriver>wait=new WebDriverWait(driver, Duration.ofSeconds(20));
-			logger.debug("location element with pageObject key "+elementKey);
-			String element=super.getProperties().getProperty(elementKey);
-			logger.debug("Element value from object properties file "+elementKey);
+		public List<WebElement> returnElements(String elementkey) {
+	
+			String element=elementkey;
+			logger.debug("location element with pageObject key "+element);
+			logger.debug("Element value from object properties file "+element);
 			String locatorType=element.split("///")[1];
 			String locatorValue=element.split("///")[0];
-			 List<WebElement>elements=null;
-		   	 switch (locatorType) {
+			Wait<WebDriver>wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+				 List<WebElement>elements=null;
+					   	 switch (locatorType) {
 				 		case "xpath":
 				 			wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(locatorValue)));
 				 			
@@ -139,11 +139,7 @@ public class WebDriverEvents2 extends baseClass2 {
 				
 		}
 
-		public void clickElement(WebElement element) {
-			
-						element.click();
-					logger.debug("Clicked element");
-				}
+	
 		
 
 		public void typeInToElement(WebElement element, String textToEnter) {
@@ -174,14 +170,14 @@ public class WebDriverEvents2 extends baseClass2 {
 
 		}
 		
-		public void minimizeWindow() {
+		public  void minimizeWindow() {
 			logger.debug("Setting browser to minimize ");
 			driver.manage().window().minimize();
 			logger.debug("Browser minimized ");
 
 		}
 		
-		public void resizeWindow( int width,int height) {
+		public  void resizeWindow( int width,int height) {
 			logger.debug("Resizing browser window to hgight "+height+" and width "+width );
 			Dimension dimensions=new Dimension(width,height);
 			driver.manage().window().setSize(dimensions);
@@ -208,7 +204,7 @@ public class WebDriverEvents2 extends baseClass2 {
 
 		}
 		
-		public void navigateBackwardTo(String titleOfWindow) {
+		public  void navigateBackwardTo(String titleOfWindow) {
 			logger.debug("Navigating browser backward untill "+titleOfWindow+" is loaded " );
 
 			while(!driver.getTitle().equalsIgnoreCase(titleOfWindow)){
@@ -220,7 +216,7 @@ public class WebDriverEvents2 extends baseClass2 {
 
 			}
 			
-		public void refreshBrowser() {
+		public  void refreshBrowser() {
 			logger.debug("Refreshed browser with current URL "+driver.getCurrentUrl() );
 
 			driver.navigate().refresh();
@@ -229,32 +225,19 @@ public class WebDriverEvents2 extends baseClass2 {
 		}
 		
 		
-		public void implicitWait(String URL) {
+		public  void implicitWait(String URL) {
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		}
 		
 		
 		
 		
-		public String getElementText(String elementKey) {
-	WebElement element=returnElement(elementKey);
-	String elementText="";
-					if(element!=null) {
-
-			elementText=element.getText();
-			logger.debug("Fetched text" +elementText+" from  "+elementKey.split("///")[0] );
-
-					}
-					return elementText;
-		}
-
+	
 		public void moveMouseOver(String elementKey) {
 			WebElement element=returnElement(elementKey);
 				if(element!=null) {
 			Actions actions = new Actions(driver);
-			logger.debug("Hovering mouse over element "+elementKey.split("///")[0] );
 			actions.moveToElement(element).build().perform();
-			logger.debug("Hovered mouse over element "+elementKey.split("///")[0] );
 
 				}
 		}
@@ -266,8 +249,7 @@ public class WebDriverEvents2 extends baseClass2 {
 			WebElement destination = returnElement(destElementKey);
 			if(destination!=null) {
 				actions.dragAndDrop(source, destination).build().perform();
-				logger.debug("Dragging element from "+sourceElementKey.split("///")[0]+""
-						+ " to  destination element "+destElementKey );
+			
 
 			}
 			
@@ -286,31 +268,16 @@ public class WebDriverEvents2 extends baseClass2 {
 			return null;
 		}
 
-		public String getPageSource() {
-			logger.debug("Returning page source of web page ");
-			return driver.getPageSource();
+	
 
-		}
+		
 
-		public String getCurrentURL() {
-			logger.debug("Returning current URL of application "+driver.getCurrentUrl());
+	
 
-			return driver.getCurrentUrl();
-		}
-
-		public String getCurrentWindow() {
-			logger.debug("Fetching current window string ");
-			return driver.getWindowHandle();
-		}
-
-		public String getPageTitle() {
-			logger.debug("Fetching current page title "+driver.getTitle());
-			return driver.getTitle();
-		}
+		
 		
 		
 		public void openLinkInNewTab(String elementKey) {
-			Actions actions=new Actions(driver);
 			moveMouseOver(elementKey);
 			actionSendKeyEvent(Keys.CONTROL);
 		String elementHrefLink=returnElement(elementKey).getAttribute("href");
