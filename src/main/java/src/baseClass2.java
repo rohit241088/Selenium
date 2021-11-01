@@ -24,10 +24,10 @@ public class baseClass2 {
 	 *
 	 */
 
-	private ThreadLocal<WebDriver>driverThreads=null;
-		private FileInputStream in=null;
-		private Properties properties=null;
-		private Properties config=null;
+	private static ThreadLocal<WebDriver>driverThreads=null;
+		private static FileInputStream in=null;
+		private static Properties properties=null;
+		private static Properties config=null;
 
 		public void setConfig() {
 			if(config==null) {
@@ -101,9 +101,9 @@ public class baseClass2 {
 				System.setProperty("webdriver.chrome.driver", "C:\\Users\\rohit\\Downloads\\Compressed\\chromedriver_win32\\chromedriver.exe");
 				events=new WebDriverEventListener();
 				driver=new ChromeDriver();
-				driver=new EventFiringDecorator(events).decorate(driver);
-				driver.manage().window().maximize();
-				driverThreads.set(driver);
+				WebDriver driver2=new EventFiringDecorator(events).decorate(driver);
+					driver2.manage().window().maximize();
+				driverThreads.set(driver2);
 				}
 			}
 			

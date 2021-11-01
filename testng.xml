@@ -4,12 +4,12 @@
 <listeners>
     <listener class-name = "utils.TestNGListenerClass"></listener>
     </listeners>
-	<test thread-count="2" name="Test" parallel='methods' >
+	<test thread-count="2" name="Test" parallel='classes' >
 
 		<classes>
 			<class name="tests.DashboardTest1" />
-		
-		</classes>
+			<class name="tests.DashboardTest2" />
+			</classes>
 
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Properties;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -36,7 +37,18 @@ public Dashboard(WebDriverEvents2 events,Properties properties) {
 	
 	
 	public Dashboard clickSearchButton() {
+		try {
 		this.searchButton().click();
+		}
+		catch(Exception e) {
+			System.out.println("Could not click ");
+		}
+		return this;
+		
+	}
+	
+	public Dashboard clickSearchButton2() {
+		this.searchField().sendKeys(Keys.ARROW_DOWN,Keys.ENTER);
 		return this;
 		
 	}
@@ -53,6 +65,7 @@ public Dashboard(WebDriverEvents2 events,Properties properties) {
 					match=true;
 					break;		}
 			}
+			System.out.println("Thread is "+Thread.currentThread().getName()+"Matching elementText "+elementText+" with search value "+searchValue+" and found "+match);
 			Assert.assertTrue(match);
 		}
 		

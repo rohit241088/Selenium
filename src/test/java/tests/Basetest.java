@@ -15,9 +15,8 @@ import utils.WebDriverEvents2;
 
 public class Basetest {
  private static Logger logger=LoggerClass.getLogger();
- private baseClass2 base=null;
- private WebDriverEvents2 webEvents2=null;
- private static WebDriver driver=null;
+ private static baseClass2 base=null;
+ private static WebDriverEvents2 webEvents2=null;
 	@BeforeTest
 	public void setupConfig() {
 		base=new baseClass2();
@@ -48,26 +47,28 @@ public class Basetest {
 	@BeforeMethod
 	public void setUpTest() {
 		base.setupDriver();
-	driver=base.getWebDriver();
+	base.getWebDriver();
 		this.loadAppURL();
-		webEvents2=new WebDriverEvents2(driver);
+		webEvents2=new WebDriverEvents2(base.getWebDriver());
 		
 	}
 	
 	@AfterMethod
 	public void closeBrowser() {
-		base.getWebDriver().close();
+		base.getWebDriver().quit();
+		webEvents2=null;
+				
 	}
 	
 	public void loadAppURL() {
 		String url=base.getConfig().getProperty("URL");
 		logger.debug("Loading URL "+url+" in browser" );
-		driver.get(url);
+		base.getWebDriver().get(url);
 		logger.debug("Loaded URL "+url+" in browser" );
 	}
 	
 public WebDriver getDriver() {
-	return driver;
+	return base.getWebDriver();
 }
 
 

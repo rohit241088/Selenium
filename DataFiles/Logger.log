@@ -5,21 +5,21 @@ DEBUG [main]: Initiailized confirguration properties file with following attribu
 DEBUG [main]: Initiailizatoin page object properties file
 DEBUG [main]: Object properties file path is D:\eclipse\first\youtube//DataFiles//pageObject.properties
 DEBUG [main]: Loaded Object properties file
-DEBUG [TestNG-test=Test-1]: Loading URL https://www.YOUTUBE.COM in browser
 DEBUG [TestNG-test=Test-2]: Loading URL https://www.YOUTUBE.COM in browser
+DEBUG [TestNG-test=Test-1]: Loading URL https://www.YOUTUBE.COM in browser
 DEBUG [TestNG-test=Test-2]: Loaded URL https://www.YOUTUBE.COM in browser
 DEBUG [TestNG-test=Test-2]: Starting test case null
 DEBUG [TestNG-test=Test-2]: location element with pageObject key //input[@id="search"]///xpath
 DEBUG [TestNG-test=Test-2]: Element value from object properties file //input[@id="search"]///xpath
 DEBUG [TestNG-test=Test-2]: Element located with xpath //input[@id="search"]
+DEBUG [TestNG-test=Test-2]: location element with pageObject key //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
+DEBUG [TestNG-test=Test-2]: Element value from object properties file //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
 DEBUG [TestNG-test=Test-1]: Loaded URL https://www.YOUTUBE.COM in browser
 DEBUG [TestNG-test=Test-1]: Starting test case null
 DEBUG [TestNG-test=Test-1]: location element with pageObject key //input[@id="search"]///xpath
 DEBUG [TestNG-test=Test-1]: Element value from object properties file //input[@id="search"]///xpath
-DEBUG [TestNG-test=Test-2]: location element with pageObject key //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
-DEBUG [TestNG-test=Test-2]: Element value from object properties file //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
-DEBUG [TestNG-test=Test-1]: Element located with xpath //input[@id="search"]
 DEBUG [TestNG-test=Test-2]: Element located with xpath //form[@id="search-form"]/following-sibling::button//yt-icon
+DEBUG [TestNG-test=Test-1]: Element located with xpath //input[@id="search"]
 DEBUG [TestNG-test=Test-1]: location element with pageObject key //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
 DEBUG [TestNG-test=Test-1]: Element value from object properties file //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
 DEBUG [TestNG-test=Test-2]: location element with pageObject key //a[@id="video-title"]///xpath
@@ -30,5 +30,30 @@ DEBUG [TestNG-test=Test-1]: Element value from object properties file //a[@id="v
 DEBUG [TestNG-test=Test-2]: Element located with xpath //a[@id="video-title"]
 DEBUG [TestNG-test=Test-1]: Element located with xpath //a[@id="video-title"]
 DEBUG [TestNG-test=Test-2]: Test case null successful
-DEBUG [TestNG-test=Test-1]: Test null failed
+DEBUG [TestNG-test=Test-1]: Test case null successful
+DEBUG [TestNG-test=Test-2]: Loading URL https://www.YOUTUBE.COM in browser
+DEBUG [TestNG-test=Test-1]: Loading URL https://www.YOUTUBE.COM in browser
+DEBUG [TestNG-test=Test-2]: Loaded URL https://www.YOUTUBE.COM in browser
+DEBUG [TestNG-test=Test-2]: Starting test case null
+DEBUG [TestNG-test=Test-2]: location element with pageObject key //input[@id="search"]///xpath
+DEBUG [TestNG-test=Test-2]: Element value from object properties file //input[@id="search"]///xpath
+DEBUG [TestNG-test=Test-2]: Element located with xpath //input[@id="search"]
+DEBUG [TestNG-test=Test-2]: location element with pageObject key //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
+DEBUG [TestNG-test=Test-2]: Element value from object properties file //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
+DEBUG [TestNG-test=Test-2]: Element located with xpath //form[@id="search-form"]/following-sibling::button//yt-icon
+DEBUG [TestNG-test=Test-2]: location element with pageObject key //a[@id="video-title"]///xpath
+DEBUG [TestNG-test=Test-2]: Element value from object properties file //a[@id="video-title"]///xpath
+DEBUG [TestNG-test=Test-1]: Loaded URL https://www.YOUTUBE.COM in browser
+DEBUG [TestNG-test=Test-1]: Starting test case null
+DEBUG [TestNG-test=Test-1]: location element with pageObject key //input[@id="search"]///xpath
+DEBUG [TestNG-test=Test-1]: Element value from object properties file //input[@id="search"]///xpath
+DEBUG [TestNG-test=Test-1]: Element located with xpath //input[@id="search"]
+DEBUG [TestNG-test=Test-1]: location element with pageObject key //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
+DEBUG [TestNG-test=Test-1]: Element value from object properties file //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
+DEBUG [TestNG-test=Test-1]: Element located with xpath //form[@id="search-form"]/following-sibling::button//yt-icon
+DEBUG [TestNG-test=Test-1]: location element with pageObject key //a[@id="video-title"]///xpath
+DEBUG [TestNG-test=Test-1]: Element value from object properties file //a[@id="video-title"]///xpath
+DEBUG [TestNG-test=Test-1]: Element located with xpath //a[@id="video-title"]
+DEBUG [TestNG-test=Test-1]: Test case null successful
+DEBUG [TestNG-test=Test-2]: Test null failed
 DEBUG [main]: Method called after all test cases in class Test

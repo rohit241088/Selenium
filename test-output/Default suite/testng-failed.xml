@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.DashboardTest1">
+      <class name="tests.DashboardTest4">
         <methods>
+          <include name="validSearchTest1"/>
           <include name="closeBrowser"/>
-          <include name="initializePage"/>
           <include name="setupConfig"/>
-          <include name="validSearchTest"/>
           <include name="setUpTest"/>
+          <include name="initializePage"/>
         </methods>
-      </class> <!-- tests.DashboardTest1 -->
+      </class> <!-- tests.DashboardTest4 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
