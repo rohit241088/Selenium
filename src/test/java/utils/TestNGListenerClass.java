@@ -1,7 +1,6 @@
 package utils;
 
-import org.testng.IInvokedMethod;
-import org.testng.IReporter;
+
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
