@@ -11,9 +11,9 @@
           <include name="initial"/>
           <include name="cleanUp"/>
           <include name="closeBrowser"/>
-          <include name="validSearchTest1"/>
           <include name="initializePage"/>
           <include name="setupConfig"/>
+          <include name="validSearchTest"/>
           <include name="setUpTest"/>
         </methods>
       </class> <!-- tests.DashboardTest1 -->
