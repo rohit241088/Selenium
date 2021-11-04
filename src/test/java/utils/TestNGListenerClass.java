@@ -13,7 +13,7 @@ public class TestNGListenerClass implements ITestListener {
 	    // not implemented
 		
 		
-		LoggerClass.getLogger().debug("Starting test case "+result.getTestName());
+		LoggerClass.getLogger().debug("Starting test case "+result.getMethod().getMethodName());
 	  }
 
 	  /**
@@ -25,7 +25,7 @@ public class TestNGListenerClass implements ITestListener {
 	 @Override
 	  public void onTestSuccess(ITestResult result) {
 	    // not implemented
-			LoggerClass.getLogger().debug("Test case "+ result.getTestName()+" successful");
+			LoggerClass.getLogger().debug("Test case "+ result.getMethod().getMethodName()+" successful");
 
 	  }
 
@@ -38,7 +38,7 @@ public class TestNGListenerClass implements ITestListener {
 	 @Override
 	  public void onTestFailure(ITestResult result) {
 	    // not implemented
-			LoggerClass.getLogger().debug("Test "+result.getTestName()+" failed");
+			LoggerClass.getLogger().debug("Test "+result.getMethod().getMethodName()+" failed");
 
 	  }
 
@@ -51,7 +51,7 @@ public class TestNGListenerClass implements ITestListener {
 	 @Override
 	  public void onTestSkipped(ITestResult result) {
 	    // not implemented
-			LoggerClass.getLogger().debug("Test "+result.getTestName()+" skipped");
+			LoggerClass.getLogger().debug("Test "+result.getMethod().getMethodName()+" skipped");
 
 	  }
 
@@ -86,7 +86,7 @@ public class TestNGListenerClass implements ITestListener {
 	 @Override
 	  public void onStart(ITestContext context) {
 	    // not implemented
-			LoggerClass.getLogger().debug("Method called before all test cases in class "+context.getName());
+			LoggerClass.getLogger().debug("Method called before all test cases in class "+context.getClass().getSimpleName());
 
 	  }
 
@@ -99,7 +99,7 @@ public class TestNGListenerClass implements ITestListener {
 	 @Override
 	  public void onFinish(ITestContext context) {
 	    // not implemented
-			LoggerClass.getLogger().debug("Method called after all test cases in class "+context.getName());
+			LoggerClass.getLogger().debug("Method called after all test cases in class "+context.getClass().getSimpleName());
 
 	  }
 	

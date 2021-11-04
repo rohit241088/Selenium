@@ -6,22 +6,41 @@ import java.util.Map;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import src.baseClass2;
 import utils.LoggerClass;
+import utils.TestNGListenerClass;
 import utils.WebDriverEvents2;
 
 public class Basetest {
- private static Logger logger=LoggerClass.getLogger();
+ private static Logger logger=null;
  private static baseClass2 base=null;
  private static WebDriverEvents2 webEvents2=null;
+ private static TestNGListenerClass listener=null;
+ 
+ @BeforeSuite
+ public void initial() {
+	 listener=new TestNGListenerClass();
+	 logger=LoggerClass.getLogger();
+		base=new baseClass2();
+		base.setConfig();
+		base.setPageObject();
+ }
+ 
+ @AfterSuite
+ public void cleanUp() {
+	 base=null;
+	 logger=null;
+ }
+ 
+ 
 	@BeforeTest
 	public void setupConfig() {
-		base=new baseClass2();
-	base.setConfig();
-	base.setPageObject();
+	
 			
 	}
 	
@@ -47,15 +66,15 @@ public class Basetest {
 	@BeforeMethod
 	public void setUpTest() {
 		base.setupDriver();
-	base.getWebDriver();
-		this.loadAppURL();
+		loadAppURL();
 		webEvents2=new WebDriverEvents2(base.getWebDriver());
 		
 	}
 	
 	@AfterMethod
 	public void closeBrowser() {
-		base.getWebDriver().quit();
+		base.getWebDriver().close();
+		base.clearCurrentThreadDriver();
 		webEvents2=null;
 				
 	}

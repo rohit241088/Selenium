@@ -4,17 +4,19 @@
   <listeners>
     <listener class-name="utils.TestNGListenerClass"/>
   </listeners>
-  <test thread-count="5" parallel="classes" name="Test(failed)">
+  <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="tests.DashboardTest2">
+      <class name="tests.DashboardTest1">
         <methods>
+          <include name="initial"/>
+          <include name="cleanUp"/>
           <include name="closeBrowser"/>
-          <include name="initializePage"/>
           <include name="validSearchTest1"/>
+          <include name="initializePage"/>
           <include name="setupConfig"/>
           <include name="setUpTest"/>
         </methods>
-      </class> <!-- tests.DashboardTest2 -->
+      </class> <!-- tests.DashboardTest1 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,16 +1,6 @@
 package tests;
 
 
-import java.time.Duration;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
-
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.Wait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -52,13 +42,7 @@ public class DashboardTest1 extends Basetest {
 	
 
 	
-	//@Test
-	public void validSearchTest2() {
-		String searchValue="virat kohli";
-
 	
-			
-		}
 		
 	
 	}

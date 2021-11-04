@@ -92,19 +92,25 @@ public class baseClass2 {
 		
 		public void setupDriver() {
 			WebDriverEventListener events=null;
+		
+			if(driverThreads==null) {
+		
 			driverThreads=new ThreadLocal<>();
+			}
+			if(driverThreads.get()==null) {
 			WebDriver driver=null;
-			//this.setConfig();
 			String browser=config.getProperty("Driver");
 			switch(browser) {
 			case "Chrome":
 				System.setProperty("webdriver.chrome.driver", "C:\\Users\\rohit\\Downloads\\Compressed\\chromedriver_win32\\chromedriver.exe");
 				events=new WebDriverEventListener();
 				driver=new ChromeDriver();
+				
 				WebDriver driver2=new EventFiringDecorator(events).decorate(driver);
 					driver2.manage().window().maximize();
 				driverThreads.set(driver2);
 				}
+			}
 			}
 			
 		
