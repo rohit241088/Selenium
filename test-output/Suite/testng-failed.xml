@@ -6,7 +6,7 @@
   </listeners>
   <test thread-count="5" parallel="methods" name="Test(failed)">
     <classes>
-      <class name="tests.DashboardTest1">
+      <class name="tests.DashboardTest2">
         <methods>
           <include name="initial"/>
           <include name="cleanUp"/>
@@ -16,7 +16,7 @@
           <include name="validSearchTest"/>
           <include name="setUpTest"/>
         </methods>
-      </class> <!-- tests.DashboardTest1 -->
+      </class> <!-- tests.DashboardTest2 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
-  <test thread-count="5" parallel="classes" name="Test(failed)" verbose="0">
+  <listeners>
+    <listener class-name="utils.TestNGListenerClass"/>
+  </listeners>
+  <test thread-count="5" parallel="methods" name="Test(failed)" verbose="0">
     <classes>
       <class name="tests.DashboardTest1">
         <methods>
-          <include name="initialize"/>
-          <include name="validSearchTest2"/>
+          <include name="initial"/>
+          <include name="cleanUp"/>
+          <include name="closeBrowser"/>
+          <include name="initializePage"/>
+          <include name="setupConfig"/>
           <include name="validSearchTest"/>
+          <include name="setUpTest"/>
         </methods>
       </class> <!-- tests.DashboardTest1 -->
-      <class name="tests.Dashboardtests">
-        <methods>
-          <include name="initialize"/>
-          <include name="validSearchTest2"/>
-          <include name="validSearchTest"/>
-        </methods>
-      </class> <!-- tests.Dashboardtests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

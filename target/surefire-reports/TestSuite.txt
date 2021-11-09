@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 3, Errors: 0, Skipped: 3, Time elapsed: 17.601 s <<< FAILURE! - in TestSuite
-initialize(tests.DashboardTest1)  Time elapsed: 0.534 s  <<< FAILURE!
-java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because the return value of "java.lang.ThreadLocal.get()" is null
-	at tests.DashboardTest1.initialize(DashboardTest1.java:13)
-
-validSearchTest(tests.Dashboardtests)  Time elapsed: 2.366 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at tests.Dashboardtests.validSearchTest(Dashboardtests.java:19)
-
-validSearchTest2(tests.Dashboardtests)  Time elapsed: 1.686 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at tests.Dashboardtests.validSearchTest2(Dashboardtests.java:27)
-
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 46.72 s - in TestSuite

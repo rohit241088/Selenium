@@ -2,18 +2,7 @@ package src;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Map.Entry;
 import java.util.Properties;
-import java.util.Set;
-
-import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.events.EventFiringDecorator;
-
-import src.WebDriverEventListener;
 import utils.LoggerClass;
 public class baseClass2 {
 	
@@ -24,7 +13,6 @@ public class baseClass2 {
 	 *
 	 */
 
-	private static ThreadLocal<WebDriver>driverThreads=null;
 		private static FileInputStream in=null;
 		private static Properties properties=null;
 		private static Properties config=null;
@@ -79,40 +67,6 @@ public class baseClass2 {
 			}
 			}
 				}
-		
-		
-		public WebDriver getWebDriver() {
-			
-			return driverThreads.get();
-		}
-		
-		public void clearCurrentThreadDriver() {
-			driverThreads.set(null);
-		}
-		
-		public void setupDriver() {
-			WebDriverEventListener events=null;
-		
-			if(driverThreads==null) {
-		
-			driverThreads=new ThreadLocal<>();
-			}
-			if(driverThreads.get()==null) {
-			WebDriver driver=null;
-			String browser=config.getProperty("Driver");
-			switch(browser) {
-			case "Chrome":
-				System.setProperty("webdriver.chrome.driver", "C:\\Users\\rohit\\Downloads\\Compressed\\chromedriver_win32\\chromedriver.exe");
-				events=new WebDriverEventListener();
-				driver=new ChromeDriver();
-				
-				WebDriver driver2=new EventFiringDecorator(events).decorate(driver);
-					driver2.manage().window().maximize();
-				driverThreads.set(driver2);
-				}
-			}
-			}
-			
 		
 			
 

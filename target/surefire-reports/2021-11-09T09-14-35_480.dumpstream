@@ -1,0 +1,4 @@
+# Created at 2021-11-09T09:14:42.962
+Boot Manifest-JAR contains absolute paths in classpath 'D:\eclipse\first\youtube\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+

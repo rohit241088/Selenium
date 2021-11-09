@@ -7,7 +7,11 @@
 	<test thread-count="2" name="Test" parallel='methods' >
 
 		<classes>
-			<class name="tests.DashboardTest1" />
+		
+			<class name="tests.DashboardTest1" >
+			
+		
+			</class>
 			<class name="tests.DashboardTest2" />
 			</classes>
 

@@ -9,54 +9,13 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">2</td><td class="num">0</td><td class="num attn">2</td><td class="num">17,002</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">4</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">46,193</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">tests.DashboardTest1</td><td><a href="#m0">initialize</a></td><td rowspan="1">1635509821728</td><td rowspan="1">25</td></tr><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">tests.Dashboardtests</td><td><a href="#m1">validSearchTest</a></td><td rowspan="1">1635509831991</td><td rowspan="1">2362</td></tr><tr class="failedeven"><td><a href="#m2">validSearchTest2</a></td><td rowspan="1">1635509837012</td><td rowspan="1">1685</td></tr><tr><th colspan="4">Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">tests.DashboardTest1</td><td><a href="#m3">initialize</a></td><td rowspan="1">1635509821764</td><td rowspan="1">-1635509821764</td></tr><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">tests.DashboardTest1</td><td><a href="#m4">validSearchTest</a></td><td rowspan="1">1635509821764</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m5">validSearchTest2</a></td><td rowspan="1">1635509821764</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">tests.DashboardTest1</td><td><a href="#m0">validSearchTest</a></td><td rowspan="1">1636430032805</td><td rowspan="1">2749</td></tr><tr class="passedeven"><td><a href="#m1">validSearchTest1</a></td><td rowspan="1">1636430030950</td><td rowspan="1">2338</td></tr><tr class="passedodd"><td rowspan="2">tests.DashboardTest2</td><td><a href="#m2">validSearchTest</a></td><td rowspan="1">1636430039220</td><td rowspan="1">2091</td></tr><tr class="passedodd"><td><a href="#m3">validSearchTest1</a></td><td rowspan="1">1636430046215</td><td rowspan="1">2259</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">tests.DashboardTest1#initialize</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;java.lang.ThreadLocal.get()&quot; is null
-	at src.baseClass2.loadAppURL(baseClass2.java:123)
-	at src.baseClass2.&lt;init&gt;(baseClass2.java:36)
-	at utils.WebDriverEvents2.&lt;init&gt;(WebDriverEvents2.java:30)
-	at pageObjects.Dashboard.&lt;init&gt;(Dashboard.java:16)
-	at tests.DashboardTest1.initialize(DashboardTest1.java:13)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">tests.Dashboardtests#validSearchTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at pageObjects.Dashboard.checkSearchWithValidValue(Dashboard.java:95)
-	at tests.Dashboardtests.validSearchTest(Dashboardtests.java:19)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">tests.Dashboardtests#validSearchTest2</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at pageObjects.Dashboard.validateResultWithSearch(Dashboard.java:65)
-	at tests.Dashboardtests.validSearchTest2(Dashboardtests.java:27)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">tests.DashboardTest1#initialize</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">tests.DashboardTest1#validSearchTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;java.lang.ThreadLocal.get()&quot; is null
-	at src.baseClass2.loadAppURL(baseClass2.java:123)
-	at src.baseClass2.&lt;init&gt;(baseClass2.java:36)
-	at utils.WebDriverEvents2.&lt;init&gt;(WebDriverEvents2.java:30)
-	at pageObjects.Dashboard.&lt;init&gt;(Dashboard.java:16)
-	at tests.DashboardTest1.initialize(DashboardTest1.java:13)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">tests.DashboardTest1#validSearchTest2</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.get(String)&quot; because the return value of &quot;java.lang.ThreadLocal.get()&quot; is null
-	at src.baseClass2.loadAppURL(baseClass2.java:123)
-	at src.baseClass2.&lt;init&gt;(baseClass2.java:36)
-	at utils.WebDriverEvents2.&lt;init&gt;(WebDriverEvents2.java:30)
-	at pageObjects.Dashboard.&lt;init&gt;(Dashboard.java:16)
-	at tests.DashboardTest1.initialize(DashboardTest1.java:13)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 16 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Test</h2><h3 id="m0">tests.DashboardTest1#validSearchTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.DashboardTest1#validSearchTest1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.DashboardTest2#validSearchTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.DashboardTest2#validSearchTest1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -1,15 +1,18 @@
 package utils;
 
 import java.time.Duration;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.function.Function;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -17,54 +20,74 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chromium.ChromiumOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.events.EventFiringDecorator;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.mysql.cj.x.protobuf.MysqlxConnection.Capability;
+
 import src.WebDriverEventListener;
 import src.baseClass2;
 
-public class WebHandler{
+public class WebHandler extends Thread{
 	
 
 		
-		private static baseClass2 base=null;
+		private baseClass2 base=null;
 		private static ThreadLocal<WebDriver>drivers=null;
-		public WebHandler() {
+		public WebHandler(baseClass2 base) {
 			drivers=new ThreadLocal<>();
+			this.base=base;
 		}
 		
+		
 		public void loadAppURL() {
-			String url=baseClass2.getConfig().getProperty("URL");
+			String url=base.getConfig().getProperty("URL");
 			logger.debug("Loading URL "+url+" in browser" );
 			getThreadSafeDriver().get(url);
 			logger.debug("Loaded URL "+url+" in browser" );
 		}
 
+		public void clearThreadedDriver() {
+			drivers.set(null);
+		}
 		
 		
 		public WebDriver getThreadSafeDriver() {
+		
 			try {
-			getThreadSafeDriver().getCurrentUrl();
+				
+		drivers.get().getCurrentUrl();
 				
 		}
+			
 			catch(NullPointerException e)
 			{
-					
-				String browser=baseClass2.getConfig().getProperty("Driver");
+				String browser=base.getConfig().getProperty("Driver");
 				switch(browser) {
 				case "Chrome":
+					
 					System.setProperty("webdriver.chrome.driver", "C:\\Users\\rohit\\Downloads\\Compressed\\chromedriver_win32\\chromedriver.exe");
-					WebDriver driver=new ChromeDriver();
+					Map<String, Object> prefs = new HashMap<String, Object>();
+					prefs.put("profile.default_content_setting_values.notifications", 2);
+					ChromeOptions options = new ChromeOptions();
+					options.setExperimentalOption("prefs", prefs);
+						WebDriver driver=new ChromeDriver(options);
+						driver.manage().window().maximize();
 					drivers.set(driver);
+break;
 					
 					}
+				return drivers.get();
 				}
-			return getThreadSafeDriver();
-			
+		
+			return drivers.get();
 		}
 		
 		
@@ -325,7 +348,7 @@ public class WebHandler{
 			}
 
 			
-			private void actionSendKeyEvent(CharSequence ch) {
+			public void actionSendKeyEvent(CharSequence ch) {
 				Actions actions=new Actions(getThreadSafeDriver());
 				logger.debug("Sending action event "+ch);
 
@@ -401,16 +424,30 @@ public class WebHandler{
 				return switched;
 			}
 			
-			public void executeJavaScript(WebElement element) {
+			public void clickElement(WebElement element,boolean isPageLoadRequired) {
 				JavascriptExecutor js=(JavascriptExecutor)getThreadSafeDriver();
 				js.executeScript("arguments[0].click();", element);
+			if(isPageLoadRequired) {
+				try {
+					Thread.sleep(1500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
+				
+				
+			}
+			
+		
 			
 			public void closeBrowser() {
 				getThreadSafeDriver().close();
 			}
 
-			
+			public void goBack() {
+				getThreadSafeDriver().navigate().back();
+			}
 
 	}
 

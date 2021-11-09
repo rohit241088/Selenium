@@ -15,26 +15,30 @@ import src.baseClass2;
 import utils.LoggerClass;
 import utils.TestNGListenerClass;
 import utils.WebDriverEvents2;
+import utils.WebHandler;
 
 public class Basetest {
  private static Logger logger=null;
  private static baseClass2 base=null;
- private static WebDriverEvents2 webEvents2=null;
+ private static WebHandler webEvents2=null;
  private static TestNGListenerClass listener=null;
  
- @BeforeSuite
+ @BeforeSuite(alwaysRun = true)
  public void initial() {
 	 listener=new TestNGListenerClass();
 	 logger=LoggerClass.getLogger();
 		base=new baseClass2();
 		base.setConfig();
 		base.setPageObject();
+		webEvents2=new WebHandler(base);
+
  }
  
- @AfterSuite
+ @AfterSuite(alwaysRun=true)
  public void cleanUp() {
 	 base=null;
 	 logger=null;
+	 webEvents2=null;
  }
  
  
@@ -63,36 +67,29 @@ public class Basetest {
 	
 	
 	
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void setUpTest() {
-		base.setupDriver();
-		loadAppURL();
-		webEvents2=new WebDriverEvents2(base.getWebDriver());
+		webEvents2.loadAppURL();
+		
 		
 	}
 	
-	@AfterMethod
+	@AfterMethod(alwaysRun=true)
 	public void closeBrowser() {
-		base.getWebDriver().close();
-		base.clearCurrentThreadDriver();
-		webEvents2=null;
+	webEvents2.closeBrowser();
+	webEvents2.clearThreadedDriver();
+	
 				
 	}
 	
-	public void loadAppURL() {
-		String url=base.getConfig().getProperty("URL");
-		logger.debug("Loading URL "+url+" in browser" );
-		base.getWebDriver().get(url);
-		logger.debug("Loaded URL "+url+" in browser" );
-	}
-	
+		
 public WebDriver getDriver() {
-	return base.getWebDriver();
+	return webEvents2.getThreadSafeDriver();
 }
 
 
 
-public WebDriverEvents2 getWebEvents2() {
+public WebHandler getWebEvents2() {
 	return webEvents2;
 }
 

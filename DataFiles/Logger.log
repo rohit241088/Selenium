@@ -5,56 +5,154 @@ DEBUG [main]: Initiailizatoin page object properties file
 DEBUG [main]: Object properties file path is D:\eclipse\first\youtube//DataFiles//pageObject.properties
 DEBUG [main]: Loaded Object properties file
 DEBUG [main]: Method called before all test cases in class TestRunner
-DEBUG [TestNG-test=Test-2]: Loading URL https://www.YOUTUBE.COM in browser
 DEBUG [TestNG-test=Test-1]: Loading URL https://www.YOUTUBE.COM in browser
-DEBUG [TestNG-test=Test-1]: Loaded URL https://www.YOUTUBE.COM in browser
-DEBUG [TestNG-test=Test-1]: Starting test case validSearchTest
-DEBUG [TestNG-test=Test-1]: location element with pageObject key //input[@id="search"]///xpath
-DEBUG [TestNG-test=Test-1]: Element value from object properties file //input[@id="search"]///xpath
-DEBUG [TestNG-test=Test-1]: Element located with xpath //input[@id="search"]
+DEBUG [TestNG-test=Test-2]: Loading URL https://www.YOUTUBE.COM in browser
 DEBUG [TestNG-test=Test-2]: Loaded URL https://www.YOUTUBE.COM in browser
 DEBUG [TestNG-test=Test-2]: Starting test case validSearchTest1
 DEBUG [TestNG-test=Test-2]: location element with pageObject key //input[@id="search"]///xpath
 DEBUG [TestNG-test=Test-2]: Element value from object properties file //input[@id="search"]///xpath
 DEBUG [TestNG-test=Test-2]: Element located with xpath //input[@id="search"]
+DEBUG [TestNG-test=Test-2]: Typing into element  valueAnushka Sharma
+DEBUG [TestNG-test=Test-2]: Typed into element  valueAnushka Sharma
 DEBUG [TestNG-test=Test-2]: location element with pageObject key //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
 DEBUG [TestNG-test=Test-2]: Element value from object properties file //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
-DEBUG [TestNG-test=Test-1]: location element with pageObject key //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
-DEBUG [TestNG-test=Test-1]: Element value from object properties file //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
 DEBUG [TestNG-test=Test-2]: Element located with xpath //form[@id="search-form"]/following-sibling::button//yt-icon
-DEBUG [TestNG-test=Test-1]: Element located with xpath //form[@id="search-form"]/following-sibling::button//yt-icon
 DEBUG [TestNG-test=Test-2]: location element with pageObject key //a[@id="video-title"]///xpath
 DEBUG [TestNG-test=Test-2]: Element value from object properties file //a[@id="video-title"]///xpath
+DEBUG [TestNG-test=Test-2]: Element located with xpath //a[@id="video-title"]
+DEBUG [TestNG-test=Test-1]: Loaded URL https://www.YOUTUBE.COM in browser
+DEBUG [TestNG-test=Test-1]: Starting test case validSearchTest
+DEBUG [TestNG-test=Test-1]: location element with pageObject key //input[@id="search"]///xpath
+DEBUG [TestNG-test=Test-1]: Element value from object properties file //input[@id="search"]///xpath
+DEBUG [TestNG-test=Test-2]: Element text Sharing Flat With Neighbour Ft. Anushka Sharma, Abhishek & Usmaan | Hasley India Originals! search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element located with xpath //input[@id="search"]
+DEBUG [TestNG-test=Test-1]: Typing into element  valueRohit Sharma
+DEBUG [TestNG-test=Test-2]: Element text Dating In Office | EP 1| Ft. Anushka Sharma & Usmaan | Webseries | Hasley India Originals! search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Aspirants Ki Diwali Ft. Anushka Sharma | The BLUNT search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text When A Girl Moves In As A Flatmate | Ft. Anushka Sharma, Abhishek Kapoor & Siddharth Bodke | RVCJ search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Jiya Re Song | Jab Tak Hai Jaan | Shah Rukh Khan, Anushka Sharma | A R Rahman | Gulzar | Neeti Mohan search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Locked In A Car With EX Ft. Anushka Sharma & Abhishek Kapoor | Hasley India Originals! search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Typed into element  valueRohit Sharma
+DEBUG [TestNG-test=Test-1]: location element with pageObject key //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
+DEBUG [TestNG-test=Test-1]: Element value from object properties file //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
+DEBUG [TestNG-test=Test-2]: Element text Din Shagna Da Lyrical Video | Phillauri | Anushka Sharma, Diljit Dosanjh | Jasleen Royal search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text How to Impress Your College Crush | Ft. Anushka Sharma, Anud Singh Dhaka & Lalitam Anand | RVCJ search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Alright! | Boys After Breakup | Ft. Anushka Sharma & Abhishek Kapoor search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element located with xpath //form[@id="search-form"]/following-sibling::button//yt-icon
+DEBUG [TestNG-test=Test-2]: Element text Sharing Flat With Girlfriend Ft. Anushka Sharma, Abhishek & Sidhant Kapoor | Hasley India search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Virat Kohli and Anushka Sharma Dancing Before Going Back To India | INDIA VS NAMIBIA T20 WORLD CUP search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text FilterCopy | When An Extrovert Dates An Introvert | Ft. Anshuman Malhotra & Anushka Sharma search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text The First Kiss Ft. Anushka Sharma, Abhishek & Usman | Hasley India search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Anushka Sharma - New Age Women - Starry Nights - Exclusive Interview By Komal Nahata search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text When Sakht Ladki Falls In Love | Ft. Apoorva Arora & Anud Singh Dhaka | RVCJ (???? ?????) search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Mera ????? Bhee ???????? | kapil sharma flirting with anushka sharma?|| kapil sharma show || memes search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Comedy Nights With Kapil | ?????? ?????? ??? ???? | Ep. 148 | Comedy Nights Gets On NH10 search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Alright! | Date With Senior | Office Romance 1/2 | Ft. Anushka Sharma, Parikshit Joshi & Vikhyat G search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Anushka Sharma's Bold Statements You May Have Missed | Best Interviews search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Viral By Chance | Viral Jodi | EP 1 | Anushka Sharma & Siddharth Bodke | Mini Web Series | Binge! search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Chura Liya (Video) | Sachet - Parampara | Himansh K, Anushka S | Irshad K | Ashish P | Bhushan Kumar search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text When Software & Mechanical Engineers Are Neighbours | Ft. Anushka Sharma & Abhishek Kapoor | RVCJ search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text When Your Crush Is Too Hot To Handle | Ft. Anushka Sharma & Abhishek Kapoor | RVCJ search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text JUGNU Challenge By Bollywood Stars|Badshah Tiger Alia Katrina Anushka Varun Ranveer| #JugnuChallenge search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-2]: Test case validSearchTest1 successful
+DEBUG [TestNG-test=Test-2]: Loading URL https://www.YOUTUBE.COM in browser
 DEBUG [TestNG-test=Test-1]: location element with pageObject key //a[@id="video-title"]///xpath
 DEBUG [TestNG-test=Test-1]: Element value from object properties file //a[@id="video-title"]///xpath
-DEBUG [TestNG-test=Test-2]: Element located with xpath //a[@id="video-title"]
 DEBUG [TestNG-test=Test-1]: Element located with xpath //a[@id="video-title"]
-DEBUG [TestNG-test=Test-2]: Test case validSearchTest1 successful
-DEBUG [TestNG-test=Test-1]: Test validSearchTest failed
-DEBUG [TestNG-test=Test-2]: Loading URL https://www.YOUTUBE.COM in browser
-DEBUG [TestNG-test=Test-1]: Loading URL https://www.YOUTUBE.COM in browser
+DEBUG [TestNG-test=Test-1]: Element text ?? Rohit ?? ??? ???? ?? ????? ?? ????? ???? ???? ??? ?? ????????: Virender Sehwag search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text IND vs NAM Stat Highlights T20 World Cup 2021: Rohit Sharma Reaches Milestone in Dominant Win search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text When Rohit Sharma left the press room in splits search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text AAJTAK SHOW: ???????? ?? ????? ?? ODI ?? T20 ??? ROHIT SHARMA ??????? ???? ?? ???? ??? ?? ??? ?????| search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text "Rohit Sharma and Rahul Dravid is Ready" | Ravi Shastri press conference | IND vs NAM | Virat Kohli search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Ravi Shastri Press Conference- Rohit ?? ??????? ?? ????, Virat Kohli ?? Hardik ?? Coach ?? ???? ??? search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Checkmate - A King TRAPPED | The Virat-Rohit Saga - Part 3 | The Change of Guard - Cricket search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Virat Kohli Captaincy: Rohit Sharma ?? ????? ????? ?? Virat Kohli, ????? ??? ??? ???? search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Rohit's Sublime 127 | 4th Test Day 3 | India Tour Of England 2021 search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Rohit Sharma & KL Rahul Records In NAM Match|IND vs NAM Match 42 Updates|T20 World Cup 2021 search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Virat Kohli on Rohit Sharma T20 Captaincy ?? ???? ?????? ??????????? search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Rohit Sharma press conference | IND vs AFG - ICC T20 WC 2021 | Rohit Sharma Thug life | Rahul Dravid search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Rohit Sharma: ???? ?? ??? ?????? ??? ????? ????? /DCNews search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text From the Vault: Rohit belts unbeaten 171 at the WACA search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Cricbuzz LIVE ??????: ???? v ????????, ??? 42, ?????-??? ?? search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text ????? ?? ???? ??????? ? ????, ???? ???? ????? Virat Kohli: Virender Sehwag search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text And was Scrapped because of its Success I The system that Found Dhoni, Raina & many more - Cricket search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Rohit Sharma Fastest Century 100* search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Rohit Sharma opens up to Dinesh Karthik | The highs, lows & what movies he's cried at ?| Interview search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Virat Kohli vs Rohit Sharma Bowling Challenge | Cricket 19 #Shorts search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text ????? , ??? ?? ??? Rohit ?? ???? ?? ???? kohli, ????? ??? ??? ??? ??? ???? 100 ????? ???????? ?? ??? search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Rohit Sharma - Top Run-Scorer | ICC Cricket World Cup 2019 | Best Bits search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Rohit's Majestic 127 | 4th Test Day 3 | India Tour Of England 2021 | Hindi search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Virat Kohli Announced on Next Team India T20 Captain | Kohli | Rohit Sharma search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Rohit Sharma Hits 140! | India v Pakistan - Match Highlights | ICC Cricket World Cup 2019 search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text T20 World Cup 2021 : Rohit Sharma ????..Virat Kohli Best T20 Captain, Batsmen | Oneindia Telugu search value Rohit Sharma matched true
+DEBUG [TestNG-test=Test-1]: Test case validSearchTest successful
 DEBUG [TestNG-test=Test-2]: Loaded URL https://www.YOUTUBE.COM in browser
 DEBUG [TestNG-test=Test-2]: Starting test case validSearchTest
 DEBUG [TestNG-test=Test-2]: location element with pageObject key //input[@id="search"]///xpath
 DEBUG [TestNG-test=Test-2]: Element value from object properties file //input[@id="search"]///xpath
 DEBUG [TestNG-test=Test-2]: Element located with xpath //input[@id="search"]
+DEBUG [TestNG-test=Test-2]: Typing into element  valueViraj Sharma
+DEBUG [TestNG-test=Test-2]: Typed into element  valueViraj Sharma
+DEBUG [TestNG-test=Test-2]: location element with pageObject key //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
+DEBUG [TestNG-test=Test-2]: Element value from object properties file //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
+DEBUG [TestNG-test=Test-2]: Element located with xpath //form[@id="search-form"]/following-sibling::button//yt-icon
+DEBUG [TestNG-test=Test-1]: Loading URL https://www.YOUTUBE.COM in browser
+DEBUG [TestNG-test=Test-2]: location element with pageObject key //a[@id="video-title"]///xpath
+DEBUG [TestNG-test=Test-2]: Element value from object properties file //a[@id="video-title"]///xpath
+DEBUG [TestNG-test=Test-2]: Element located with xpath //a[@id="video-title"]
+DEBUG [TestNG-test=Test-2]: Element text Viraj makes India win | Dishoom | Movie Scene search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text TUMSA OFFICIAL VIDEO | VIRAJ SHARMA | NEW SONG 2018 search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Wagah threatens to kill Viraj's Parents | Dishoom | Movie Scene search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Indian Viraj sharma dishoom search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Viraj makes India win | Dishoom | Movie Scene search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Dishoom movie best last Climax scence (Varun Dhawan) (John Abraham) 2016 uploaded in 2020 bollywood search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Akshay Khanna is a real threat | Dishoom | Movie Scene search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Dishoom - Best Scenes - Varun Dhawan, John Abraham & Jacqueline Fernandez search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text A Day In The Life Of A Middle Class Blogger | Viraj Ghelani search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Football With Ranbir Kapoor - Vlog 53 search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Played Football Against Ranbir Kapoor | Vlog 36 search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text DUJA PYAR DAARU (official video)| Raaj Sharma | Real Heart Records | search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Experiment of lassaigne test in vapourization method_____? search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Varun Dhawan Makes Fun of Reporter At Dishoom Trailer Launch | Viraj Sharma | Mango News search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text Dishoom movie best dialogue part search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Element text CHORI KHELE PUBG Viraj Sharma 2021 PUBG HARYANVI DJ MIX SONG GMS exported 0 search value Viraj Sharma matched true
+DEBUG [TestNG-test=Test-2]: Test case validSearchTest successful
 DEBUG [TestNG-test=Test-1]: Loaded URL https://www.YOUTUBE.COM in browser
 DEBUG [TestNG-test=Test-1]: Starting test case validSearchTest1
 DEBUG [TestNG-test=Test-1]: location element with pageObject key //input[@id="search"]///xpath
 DEBUG [TestNG-test=Test-1]: Element value from object properties file //input[@id="search"]///xpath
-DEBUG [TestNG-test=Test-2]: location element with pageObject key //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
-DEBUG [TestNG-test=Test-2]: Element value from object properties file //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
 DEBUG [TestNG-test=Test-1]: Element located with xpath //input[@id="search"]
-DEBUG [TestNG-test=Test-2]: Element located with xpath //form[@id="search-form"]/following-sibling::button//yt-icon
+DEBUG [TestNG-test=Test-1]: Typing into element  valueAnushka Sharma
+DEBUG [TestNG-test=Test-1]: Typed into element  valueAnushka Sharma
 DEBUG [TestNG-test=Test-1]: location element with pageObject key //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
 DEBUG [TestNG-test=Test-1]: Element value from object properties file //form[@id="search-form"]/following-sibling::button//yt-icon///xpath
-DEBUG [TestNG-test=Test-2]: location element with pageObject key //a[@id="video-title"]///xpath
-DEBUG [TestNG-test=Test-2]: Element value from object properties file //a[@id="video-title"]///xpath
 DEBUG [TestNG-test=Test-1]: Element located with xpath //form[@id="search-form"]/following-sibling::button//yt-icon
 DEBUG [TestNG-test=Test-1]: location element with pageObject key //a[@id="video-title"]///xpath
 DEBUG [TestNG-test=Test-1]: Element value from object properties file //a[@id="video-title"]///xpath
-DEBUG [TestNG-test=Test-2]: Element located with xpath //a[@id="video-title"]
 DEBUG [TestNG-test=Test-1]: Element located with xpath //a[@id="video-title"]
-DEBUG [TestNG-test=Test-2]: Test case validSearchTest successful
+DEBUG [TestNG-test=Test-1]: Element text Dating In Office | EP 1| Ft. Anushka Sharma & Usmaan | Webseries | Hasley India Originals! search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Sharing Flat With Neighbour Ft. Anushka Sharma, Abhishek & Usmaan | Hasley India Originals! search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Jiya Re Song | Jab Tak Hai Jaan | Shah Rukh Khan, Anushka Sharma | A R Rahman | Gulzar | Neeti Mohan search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text When A Girl Moves In As A Flatmate | Ft. Anushka Sharma, Abhishek Kapoor & Siddharth Bodke | RVCJ search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Din Shagna Da Lyrical Video | Phillauri | Anushka Sharma, Diljit Dosanjh | Jasleen Royal search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Aspirants Ki Diwali Ft. Anushka Sharma | The BLUNT search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Alright! | Date With Senior | Office Romance 1/2 | Ft. Anushka Sharma, Parikshit Joshi & Vikhyat G search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Alright! | Boys After Breakup | Ft. Anushka Sharma & Abhishek Kapoor search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Locked In A Car With EX Ft. Anushka Sharma & Abhishek Kapoor | Hasley India Originals! search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text How to Impress Your College Crush | Ft. Anushka Sharma, Anud Singh Dhaka & Lalitam Anand | RVCJ search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Sharing Flat With Girlfriend Ft. Anushka Sharma, Abhishek & Sidhant Kapoor | Hasley India search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text When Your Crush Is Too Hot To Handle | Ft. Anushka Sharma & Abhishek Kapoor | RVCJ search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text The First Kiss Ft. Anushka Sharma, Abhishek & Usman | Hasley India search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Anushka Sharma - New Age Women - Starry Nights - Exclusive Interview By Komal Nahata search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Dr. Gulati Gets Flirty With Anushka Sharma | The Kapil Sharma Show | SET India Rewind search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Mera ????? Bhee ???????? | kapil sharma flirting with anushka sharma?|| kapil sharma show || memes search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Virat Kohli and Anushka Sharma Dancing Before Going Back To India | INDIA VS NAMIBIA T20 WORLD CUP search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text FilterCopy | When An Extrovert Dates An Introvert | Ft. Anshuman Malhotra & Anushka Sharma search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Anushka Sharma's Bold Statements You May Have Missed | Best Interviews search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Viral By Chance | Viral Jodi | EP 1 | Anushka Sharma & Siddharth Bodke | Mini Web Series | Binge! search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Comedy Nights With Kapil | ?????? ?????? ??? ???? | Ep. 148 | Comedy Nights Gets On NH10 search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text Chura Liya (Video) | Sachet - Parampara | Himansh K, Anushka S | Irshad K | Ashish P | Bhushan Kumar search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text When Software & Mechanical Engineers Are Neighbours | Ft. Anushka Sharma & Abhishek Kapoor | RVCJ search value Anushka Sharma matched true
+DEBUG [TestNG-test=Test-1]: Element text JUGNU Challenge By Bollywood Stars|Badshah Tiger Alia Katrina Anushka Varun Ranveer| #JugnuChallenge search value Anushka Sharma matched true
 DEBUG [TestNG-test=Test-1]: Test case validSearchTest1 successful
 DEBUG [main]: Method called after all test cases in class TestRunner

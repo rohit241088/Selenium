@@ -7,14 +7,15 @@ import java.util.Properties;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
-import junit.framework.Assert;
 import utils.WebDriverEvents2;
+import utils.WebHandler;
 
 public class Dashboard {
-private Properties properties=null;
-private WebDriverEvents2 webEvents=null;
-public Dashboard(WebDriverEvents2 events,Properties properties) {
+private static Properties properties=null;
+private static WebHandler webEvents=null;
+public Dashboard(WebHandler events,Properties properties) {
 		this.webEvents=events;
 		this.properties=properties;
 }
@@ -29,8 +30,14 @@ public Dashboard(WebDriverEvents2 events,Properties properties) {
 		return webEvents.returnElements(properties.getProperty("searchresults"));
 	}
 	
+	
+	public List<WebElement> getSearchResults() {
+		return this.searchResults();
+	}
+	
+	
 	public Dashboard typeInSearch(String searchValue) {
-		this.searchField().sendKeys(searchValue);
+		webEvents.typeInToElement(this.searchField(), searchValue);
 		return this;
 		
 	}
@@ -38,7 +45,7 @@ public Dashboard(WebDriverEvents2 events,Properties properties) {
 	
 	public Dashboard clickSearchButton() {
 		try {
-		this.searchButton().click();
+		webEvents.clickElement(searchButton(),true);
 		}
 		catch(Exception e) {
 			System.out.println("Could not click ");
@@ -53,7 +60,7 @@ public Dashboard(WebDriverEvents2 events,Properties properties) {
 		
 	}
 	
-	public boolean verifySearchResults(String searchValue) {
+	public synchronized boolean verifySearchResults(String searchValue) {
 		List<WebElement>allElements=this.searchResults();
 		Iterator<WebElement>elementIterator=allElements.iterator();
 		String[] searchArray=searchValue.split(" ");
@@ -65,7 +72,7 @@ public Dashboard(WebDriverEvents2 events,Properties properties) {
 					match=true;
 					break;		}
 			}
-			System.out.println("Thread is "+Thread.currentThread().getName()+"Matching elementText "+elementText+" with search value "+searchValue+" and found "+match);
+			System.out.println("Thread is "+Thread.currentThread().getId()+"Matching elementText "+elementText+" with search value "+searchValue+" and found "+match);
 			Assert.assertTrue(match);
 		}
 		
