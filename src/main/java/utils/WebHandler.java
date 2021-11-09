@@ -110,7 +110,13 @@ break;
 					    	 WebElement element=null;
 					     switch (locatorType.toLowerCase()) {
 					 		case "xpath":
+					 			try {
 					 			element=driverLocal.findElement(By.xpath(locatorValue));
+					 			}
+					 			catch(NoSuchElementException e) {
+						 			element=driverLocal.findElement(By.xpath(locatorValue.substring(0, locatorValue.length()-1)));
+
+					 			}
 					 			logger.debug("Element located with "+locatorType+" "+locatorValue);
 					 			break;
 					 		case "css":
@@ -216,13 +222,19 @@ break;
 
 			public void clearTextElement(WebElement element) {
 				
-					while(element.getText()!="") {
-
+					if(element!=null) {
+					while(element.getAttribute("value").length()!=0)	{
+						System.out.println(element.getAttribute("innerText"));
+						element.sendKeys(Keys.BACK_SPACE);
+					}
+					while(element.getText().length()!=0)	{
+						System.out.println(element.getAttribute("innerText"));
 						element.sendKeys(Keys.BACK_SPACE);
 					}
 					logger.debug("Cleared value from element");
 
 				
+			}
 			}
 
 			public void maximizeWindow() {

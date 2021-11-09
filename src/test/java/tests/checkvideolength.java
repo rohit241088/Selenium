@@ -30,6 +30,7 @@ public class checkvideolength extends Basetest {
 		@Test
 		public void validSearchTest() {
 			String[] names= {"Rohit Sharma", "Anjali Vats","Chetan Vats"};
+			
 			for(int i=0;i<names.length;i++) {
 			String searchValue=names[i];
 			boolean match=false;
@@ -71,7 +72,7 @@ public class checkvideolength extends Basetest {
 		}
 		
 			}
-			super.getWebEvents2().clearTextElement(null);
+			super.getWebEvents2().clearTextElement(super.getWebEvents2().returnElement(super.getBase().getPageObjects().getProperty("searchfield")));
 			}
 		
 			
